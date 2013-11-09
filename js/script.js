@@ -4,7 +4,7 @@ $(window).load(function(){
 	$('#searchButton').on('click', function(){
 		var query = $('input').val();
 		if(query)
-			submitQuery(query);
+			submitQuery(query); 
 	});
 
 	//user presses key
@@ -34,9 +34,27 @@ function submitQuery(query){
 		type: "POST",
 		data: "searchTerm=" + query,
 		success: function(data){
-			var jsonData = $.parseJSON(data);
-			populateArticle(data)
+			var command = $('<div/>').text(data);
+			$('body').prepend(command);
+			// var jsonData = $.parseJSON(data);
+			// populateArticle(jsonData.articles);
+			// temp/result.txt
+			checkForFile();
 		},
+	});
+}
+
+function checkForFile(){
+	$.ajax({
+		url: "temp/result.txt",
+		async: false,
+		success:function(data){
+			var jsonData = $.parseJSON(data);
+			populateArticle(jsonData.articles);
+		},
+		failure: function(){
+			checkForFile();
+		}
 	});
 }
 
@@ -292,4 +310,3 @@ function populateArticle(options){
 function destroyArticle(){
 	$('.article').remove();
 }
-
