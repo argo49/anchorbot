@@ -34,6 +34,9 @@ if(filter_var($url, FILTER_VALIDATE_URL) === TRUE){
 	
 	$myFile = "temp/".$output;
 	$fh = fopen($myFile, 'w') or die("can't open file");
+	
+	$enc = mb_detect_encoding($jsonResponse);
+	$jsonResponse = mb_convert_encoding($jsonResponse, "UTF-8", $enc);
 	fwrite($fh, $jsonResponse);
 	fclose($fh);
 }
@@ -64,6 +67,8 @@ require_once('lib/php/simple_html_dom.php');
 	//save the file
 	$myFile = "temp/".$output;
 	$fh = fopen($myFile, 'w') or die("can't open file");
+	$enc = mb_detect_encoding($jsonReturn);
+	$jsonReturn = mb_convert_encoding($jsonReturn, "UTF-8", $enc);
 	fwrite($fh, $jsonReturn);
 	fclose($fh);
 }
@@ -125,7 +130,7 @@ if (count($results) < 0 ){
 if (!isset($results[0]->Url)){
 	return false;
 }else{
-	$url = $results[0]->Url;
+	$url = $results[0]->Url
 }
 
 //make an alchemyDump
