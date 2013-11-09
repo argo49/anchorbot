@@ -29,6 +29,7 @@ function submitQuery(query){
 	shrinkHeader();
 
 	// bing/webscrape
+	/*
 	$.ajax({
 		url: "scraper.php",
 		type: "POST",
@@ -39,11 +40,41 @@ function submitQuery(query){
 			// var jsonData = $.parseJSON(data);
 			// populateArticle(jsonData.articles);
 			// temp/result.txt
-			$('body').prepend($('<button/>').on('click', function(){
+			var but = $('body').prepend($('<button/>').on('click', function(){
 				checkForFile();
 			}).text('Check For File'));
 		},
-	});
+	});*/
+
+	var mock = [{
+		title:"Trouble in Philippines",
+		summary:"The Philippine Red Cross has estimated that more than 1,000 people have been killed in the coastal city of Tacloban and at least 200 in hard-hit Samar province when one of the strongest typhoons slammed into the country.",
+		//entities
+		entwrap:[{
+			name:query,
+			type:"thing",
+			relevance:100
+		}]	
+	},{title:"Trouble in Philippines",
+		summary:"Are you in the affected area?Send us images and video, but please stay safe.",
+		//entities
+		entwrap:[{
+			name:"affected",
+			type:"adjective",
+			relevance:1
+		}]
+
+	},{title:"Trouble in Philippines",
+		summary:"Tacloban, Philippines (CNN) -- The destruction here is staggering: No building in this coastal city of 200,000 residents appeared Saturday to have escaped damage when Super Typhoon Haiyan roared through on Friday.",
+		//entities
+		entwrap:[{
+			name:"coastal",
+			type:"adjective",
+			relevance:1
+		}]
+	}];
+
+	populateArticle(mock);
 }
 
 function checkForFile(){
