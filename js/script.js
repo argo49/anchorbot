@@ -34,7 +34,7 @@ function submitQuery(query){
 		type: "POST",
 		data: "searchTerm=" + query,
 		success: function(data){
-			var command = $('<div/>').text(data);
+			var command = $('<input type="text" />').val(data);
 			$('body').prepend(command);
 			// var jsonData = $.parseJSON(data);
 			// populateArticle(jsonData.articles);
