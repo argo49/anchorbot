@@ -20,6 +20,14 @@ p{
 	font-size: 20px;
 }
 
+ul{
+	padding-left: 50px;
+}
+
+h1, h3{
+	margin-top: 25px;
+}
+
 
 
 
@@ -53,8 +61,8 @@ p{
 	padding-bottom: 20px;
 }
 
-#resultsContainer{
-	padding: 0 150px;
+#article{
+	margin: 0 150px;
 }
 
 #articleImage{
@@ -68,8 +76,12 @@ p{
 	margin-bottom: 20px;
 }
 
-#article{
+#articleContent{
 	margin: 0 15px;
+}
+
+#searchResults{
+	margin: 0 200px;
 }
 
 
@@ -90,6 +102,10 @@ p{
 
 .noShadow{
 	box-shadow: none !important;
+}
+
+.bold{
+	font-weight: bold;
 }
 
 @font-face {
