@@ -108,6 +108,11 @@ h1, h3{
 	font-weight: bold;
 }
 
+.articleTitle{
+	text-align: center;
+	font-size: 51px;
+}
+
 @font-face {
   font-family: "Aaargh";
   src: url("../fonts/aaargh-webfont.ttf");

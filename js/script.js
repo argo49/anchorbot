@@ -49,9 +49,10 @@ function submitQuery(query){
 		url: "scraper.php",
 		type: "POST",
 		data: "searchTerm=" + query,
-		success: function(){
-			$('.loader').text('Analyzing...');
-			scraperSuccess();
+		success: function(data){
+			var jsonData = $.parseJSON(data);
+			populateArticle(data)
+			//scraperSuccess();
 
 		},
 	});
@@ -73,8 +74,6 @@ function setHeaderImage(query){
             jsoncallback:  '?'
         },
         success: function(data){
-        	console.log("Google Data: ");
-        	console.log(data);
         	var imgUrl = data.responseData.results[0].unescapedUrl;
         	$('#articleImage').attr('src',imgUrl).load(function(){
         		scrollHeaderImageDown();
@@ -88,7 +87,8 @@ function setHeaderImage(query){
 }
 
 function scraperSuccess(){
-	checkInterval = window.setInterval(checkForResults(), 500);
+	//checkInterval = window.setInterval(checkForResults(), 500);
+
 }
 
 function checkForResults(){
@@ -132,7 +132,30 @@ function checkForResults(){
 			name:$('input').val(),
 			type:"people",
 			sentiment:"righteous",
-			relevance: 9001
+			relevance: 9003
+		},
+		{
+			name:"apple",
+			type:"noun",
+			sentiment:"happy",
+			relevance: 1
+		}]
+	},
+	{
+		title: "Heroic Dude2",
+		summary: "Finn the Human is the star of Adventure Time.",
+		//entity 1
+		entwrap: [{
+			name:"brad pitt",
+			type:"people",
+			sentiment:"righteous",
+			relevance: 9002
+		},
+		{
+			name:"pear",
+			type:"noun",
+			sentiment:"happy",
+			relevance: 1
 		}]
 	}]
 
@@ -215,14 +238,14 @@ function createArticle(){
 }
 
 function populateArticle(options){
-	console.log(options);
 	var content = $('#articleContent');
 	var highestEntity;
 	var highestRelevance = 0;
 	var entityNames = [];
+
 	for(var i = 0; i < options.length; i++){
 		for(var j = 0; j < options[i].entwrap.length; j++){
-			entityNames.push(options[i].entwrap[j].name);
+			entityNames.push(options[i].entwrap[j]);
 			if(options[i].entwrap[j].relevance > highestRelevance){
 				highestRelevance = options[i].entwrap[j].relevance;
 				highestEntity = options[i].entwrap[j];
@@ -241,31 +264,40 @@ function populateArticle(options){
 		summary.append(p);
 	}
 
-
-	var peopleHeader = $('<h1/>').text('People in this article');
-	var peopleDiv = $('<div/>').addClass('people');
 	
 	// make peopleEntity array
 	var people = [];
+	var things = [];
 	for(var i = 0; i < options.length; i++){
 		for(var j = 0; j < options[i].entwrap.length; j++){
 			if(options[i].entwrap[j].type == "people"){
 				people.push(options[i].entwrap[j]);
+			}else{
+				things.push(options[i].entwrap[j]);
 			}
 		}
 	}
 
+	var peopleHeader = $('<h1/>').text('People in this article');
+	var peopleDiv = $('<div/>').addClass('people');
 	
 	for(var i = 0; i < people.length; i++){
 		var inputStr = "input="+people[i].name+"&type=xml";
-		console.log("inputStr: " + inputStr);
-		peopleDiv.append($('<h3/>').text(highestEntity.name));
+		
+
 		$.ajax({
 			url: "wolfram.php",
 			type: "POST",
 			data: inputStr,
 			success: function(data){
-				var wolframData = $.parseXML(data);
+				var peopleDiv = $('.people');
+
+				var wolfJsonData = $.parseJSON(data);
+
+				var name = wolfJsonData.name;
+				peopleDiv.append($('<h3/>').text(name));
+
+				var wolframData = $.parseXML(wolfJsonData.xmlCall);
 				var plaintext = $(wolframData).find('plaintext').text();
 
 				var whitespace = /(\r|\n)/
@@ -274,7 +306,6 @@ function populateArticle(options){
 
 					if(!whitespace.test(e)){
 						var arr = e.split(pipe);
-						console.log(arr);
 						if(arr[0]) var prop = arr[0].trim();
 						if(arr[1]) var val = arr[1].trim();
 						if(prop && val) {
@@ -287,7 +318,6 @@ function populateArticle(options){
 						return obj;
 				});
 
-				console.log(plaintextArr);
 
 				var infoList = $('<ul/>');
 
@@ -303,43 +333,66 @@ function populateArticle(options){
 		});
 	}
 
-
 	var thingsHeader = $('<h1/>').text('Other things in this article');
 	var thingsDiv = $('<div/>').addClass('things');
-
-	var things = [];
-	for(var i = 0; i < options.length; i++){
-		for(var j = 0; j < options[i].entwrap.length; j++){
-			if(options[i].entwrap[j].type != "people"){
-				things.push(options[i].entwrap[j]);
-			}
-		}
-	}
-
-	var thingsElements = [];
-	/*
+	
 	for(var i = 0; i < things.length; i++){
+		var inputStr = "input="+things[i].name+"&type=xml";
+		
 		$.ajax({
-			url: "http://api.wolframalpha.com/v2/query?input=" + escape(things[i].name) + "&appid=E83K2X-HP4AL66P4P",
+			url: "wolfram.php",
 			type: "POST",
+			data: inputStr,
 			success: function(data){
-				//toSource() this
-				console.log("WolframData: " + data);
-				//thingsElements.push(jquery wolfram people elements);
+				var thingsDiv = $('.things');
+
+				var wolfJsonData = $.parseJSON(data);
+
+				var name = wolfJsonData.name;
+				thingsDiv.append($('<h3/>').text(name));
+
+				var wolframData = $.parseXML(wolfJsonData.xmlCall);
+				var plaintext = $(wolframData).find('plaintext').text();
+
+				var whitespace = /(\r|\n)/
+				var plaintextArr = $.map(plaintext.split(whitespace), function(e, i){
+					var pipe = /\|/
+
+					if(!whitespace.test(e)){
+						var arr = e.split(pipe);
+						if(arr[0]) var prop = arr[0].trim();
+						if(arr[1]) var val = arr[1].trim();
+						if(prop && val) {
+							prop = prop[0].toUpperCase() + prop.slice(1)
+							var obj = {};
+							obj[prop] = val;
+						}
+					} 
+					if(obj)
+						return obj;
+				});
+
+
+				var infoList = $('<ul/>');
+
+				for(var i = 0; i < plaintextArr.length; i++){
+					for(var prop in plaintextArr[i]){
+						var property = $('<span/>').addClass('bold');
+						infoList.append($('<li/>').html("<span style='font-weight:bold'>" + prop + " : </span>" +plaintextArr[i][prop]));
+					}
+				}
+
+				thingsDiv.append(infoList);
 			}
 		});
-	}*/
-
-	for(var i = 0; i < thingsElements.length; i++){
-		thingsDiv.push(thingsElements[i]);
 	}
 
-	//append title
+	content.append($('<h1/>').text(options[0].title).addClass('articleTitle'));
 	content.append(summary);
 	content.append(peopleHeader);
 	content.append(peopleDiv);
 	content.append(thingsHeader);
-	content.append(things)
+	content.append(thingsDiv);
 	$('.placeholder').remove();
 	$('#searchResults').fadeIn(2000);
 	$('.dimmer').removeClass('active');
