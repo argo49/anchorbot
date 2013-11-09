@@ -221,28 +221,16 @@ function searchByTerm($searchTerm){
 function callJava($outputs){
 
 	//var_dump($outputs);
-	$savefile = md5(time('ru').mt_rand()).".result";
+	$savefile = "result.txt";
 	$outputString =$savefile." ";
 	foreach($outputs as $output){
 		$outputString = $outputString." ".$output;
 	}
-	//$command = "java -jar temp/Analyzer.jar ".$outputString;
-	$command = "java -version";
-	$status;
-	$response=array();
-	exec("env");
-	$exec = exec($command,$response, $status);
-	echo "$command";
-	echo "\n status: $status";
-	echo "\n response: ";
-	var_dump($response);
-	echo "----";
-	echo file_get_contents("temp/res".$savefile);
+	$command = "java -jar temp/Analyzer.jar ".$outputString;
+
+	echo $command;
 	
 	
-	
-	unset($_SESSION['alchemy']);
-	session_destroy();
 
 }
 /*
@@ -284,7 +272,7 @@ if(preg_match($reg_exUrl, $searchTerm)){
 	
 	//if the URL doesn't exist, shit hits the fan and we return an error
 	if($file_headers[0] == 'HTTP/1.1 404 Not Found') {
-		echo json_encode($return = array("status"=>"fail","message"=>"Sorry, that URL doesn't seem to exist (Error 404)") );
+		//echo json_encode($return = array("status"=>"fail","message"=>"Sorry, that URL doesn't seem to exist (Error 404)") );
 		exit();
 	}
 	
@@ -309,10 +297,10 @@ if(preg_match($reg_exUrl, $searchTerm)){
 	$outputs[] = $output;
 	
 	if (count($outputs)< 2){
-		echo json_encode($return = array("status"=>"warning","message"=>"No Articles Found") );
+		//echo json_encode($return = array("status"=>"warning","message"=>"No Articles Found") );
 	}else{
 	
-		echo json_encode($return = array("status"=>"success","message"=>"URL Aricle Search Commenced!") );
+		//echo json_encode($return = array("status"=>"success","message"=>"URL Aricle Search Commenced!") );
 	}
 	
 	
@@ -326,12 +314,12 @@ if(preg_match($reg_exUrl, $searchTerm)){
 	//searchByTerm makes a bunch of scrape files for the Java code to handle :D
 	$outputs = searchByTerm($keywords);
 	if (count($outputs)< 1){
-		echo json_encode($return = array("status"=>"warning","message"=>"No Articles Found") );
+		//echo json_encode($return = array("status"=>"warning","message"=>"No Articles Found") );
 	}else{
 		
-		echo json_encode($return = array("status"=>"success","message"=>"URL Aricle Search Commenced!") );
+		//echo json_encode($return = array("status"=>"success","message"=>"URL Aricle Search Commenced!") );
 	}
-	echo json_encode($return = array("status"=>"success","message"=>"Aricle Term Search Commenced!") );
+	//echo json_encode($return = array("status"=>"success","message"=>"Aricle Term Search Commenced!") );
 
 	
 	callJava($outputs);
