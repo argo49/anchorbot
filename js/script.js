@@ -5,8 +5,6 @@ $(window).load(function(){
 		var query = $('input').val();
 		if(query)
 			submitQuery(query);
-
-		
 	});
 
 	//user presses key
@@ -15,9 +13,6 @@ $(window).load(function(){
 		if(e.keyCode == 13 && query){
 			submitQuery(query);
 		}
-
-
-		
 	});
 });
 
@@ -32,17 +27,6 @@ function submitQuery(query){
 	var dimmer = $('.dimmer');
 	dimmer.addClass('active');
 	shrinkHeader();
-/*
-	window.setTimeout(function() {
-		$('.placeholder').remove();
-		$('#searchResults').fadeIn(2000, function(){
-			window.setTimeout(function() {dimmer.fadeOut(400);}, 400)
-			if(!scrollEnabled)scrollHeaderImageDown();
-		});
-	}, 1000);
-*/
-
-
 
 	// bing/webscrape
 	$.ajax({
@@ -52,14 +36,9 @@ function submitQuery(query){
 		success: function(data){
 			var jsonData = $.parseJSON(data);
 			populateArticle(data)
-			//scraperSuccess();
-
 		},
 	});
-
 }
-
-var checkInterval;
 
 function setHeaderImage(query){
 	var iURL = "http://ajax.googleapis.com/ajax/services/search/images";
@@ -84,82 +63,6 @@ function setHeaderImage(query){
         }
         
     });
-}
-
-function scraperSuccess(){
-	//checkInterval = window.setInterval(checkForResults(), 500);
-
-}
-
-function checkForResults(){
-	/*
-	$.ajax({
-		//mock url
-		url: "lib/mock",
-		type: "POST",
-		success: function(data){
-			console.log(data);
-			//var jsonData = JSON.parse(data);
-			var jsonData = [
-			//article 1
-			{
-				title: "Heroic Dude",
-				summary: "Finn the Human is the star of Adventure Time.",
-				//entity 1
-				entwrap: [{
-					name:"finn the human",
-					type:"people",
-					sentiment:"righteous",
-					relevance: 9001
-				}]
-			}]
-			console.log(jsonData);
-			if(data.status == "found"){
-				clearInterval(checkInterval);
-				populateArticle(jsonData);	
-			}
-		}
-	});
-*/
-
-	var jsonData = [
-	//article 1
-	{
-		title: "Heroic Dude",
-		summary: "Finn the Human is the star of Adventure Time.",
-		//entity 1
-		entwrap: [{
-			name:$('input').val(),
-			type:"people",
-			sentiment:"righteous",
-			relevance: 9003
-		},
-		{
-			name:"apple",
-			type:"noun",
-			sentiment:"happy",
-			relevance: 1
-		}]
-	},
-	{
-		title: "Heroic Dude2",
-		summary: "Finn the Human is the star of Adventure Time.",
-		//entity 1
-		entwrap: [{
-			name:"brad pitt",
-			type:"people",
-			sentiment:"righteous",
-			relevance: 9002
-		},
-		{
-			name:"pear",
-			type:"noun",
-			sentiment:"happy",
-			relevance: 1
-		}]
-	}]
-
-	populateArticle(jsonData);	
 }
 
 function shrinkHeader(){
@@ -194,18 +97,6 @@ function scrollHeaderImageUp(){
 	image.animate({top:"+="+(imageHeight-250)+"px"}, 30000, function(){
 		scrollHeaderImageDown();
 	});
-}
-
-function addCloseIcon(){
-
-}
-
-function removeCloseIcon(){
-
-}
-
-function closeIcon(){
-
 }
 
 function createArticle(){
@@ -396,9 +287,6 @@ function populateArticle(options){
 	$('.placeholder').remove();
 	$('#searchResults').fadeIn(2000);
 	$('.dimmer').removeClass('active');
-
-
-
 }
 
 function destroyArticle(){
