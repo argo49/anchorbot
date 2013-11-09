@@ -34,26 +34,23 @@ function submitQuery(query){
 		type: "POST",
 		data: "searchTerm=" + query,
 		success: function(data){
-			var command = $('<input type="text" />').val(data);
+			var command = $('<input type="text" style="width:1000px" />').val(data);
 			$('body').prepend(command);
 			// var jsonData = $.parseJSON(data);
 			// populateArticle(jsonData.articles);
 			// temp/result.txt
-			checkForFile();
+			window.setInterval(checkForFile(), 500);
 		},
 	});
 }
 
 function checkForFile(){
 	$.ajax({
-		url: "temp/result.txt",
+		url: "temp/return-result.txt",
 		async: false,
 		success:function(data){
 			var jsonData = $.parseJSON(data);
 			populateArticle(jsonData.articles);
-		},
-		failure: function(){
-			checkForFile();
 		}
 	});
 }
