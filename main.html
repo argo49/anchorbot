@@ -9,16 +9,17 @@
 	</head>
 	<body>
 		<div id="content">
-			<div id="header">
-				<div>AnchorBot</div>
-				<img alt="microphone.jpg" src="" />
-
+			<div class="container" id="header">
+				<div class="element" id="title">AnchorBot</div>
+				<img class="element" id="logo" alt="microphone.png" src="lib/images/microphone.png" />
 			</div>
 
 			<div id="mainSearch">
 				<div id="searchBox" class="ui action input">
- 					<div id="searchButtonDiv"><button class="ui button">Search</button></div>
- 					<div id="searchInputDiv"><input id="searchInput" type="text" placeholder="Search..."></div>
+					<div class="container">
+	 					<div class="element"><input id="searchInput" type="text" placeholder="Enter an article URL or search for news..."></div>
+	 					<div class="element"><button class="ui button">Search</button></div>
+	 				</div>
 				</div>
 			</div>
 		</div>

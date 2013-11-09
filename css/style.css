@@ -3,14 +3,42 @@
 	margin : 0 0 0 0;
 }
 
-#mainSearch{
-	width: 1000px;
+body, html{
+	height:100%;
+}
+
+#content{
+	height:100%;
 }
 
 #searchInput{
 	width:550px;
 }
 
-#searchInputDiv, #searchButtonDiv{
-	float:right;
+#title{
+	font-family: "Aaargh";
+	font-size: 80px;
+}
+
+#logo{
+	height: 80px;
+}
+
+#header{
+	padding-bottom: 20px;
+	padding-top: 250px;
+}
+
+.container{
+	text-align:center;
+	vertical-align: middle;
+}
+
+.container .element{
+	display:inline-block;
+}
+
+@font-face {
+  font-family: "Aaargh";
+  src: url("../fonts/aaargh-webfont.ttf");
 }
