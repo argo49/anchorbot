@@ -7,6 +7,8 @@ $(window).load(function(){
 
 });
 
+var scrollEnabled = false;
+
 var submitQuery = function(){
 	var query = $('#searchInput').val();
 
@@ -20,7 +22,7 @@ var submitQuery = function(){
 		$('#placeholder').remove();
 		$('#searchResults').fadeIn(2000, function(){
 			window.setTimeout(function() {dimmer.fadeOut(400);}, 400)
-			scrollHeaderImageDown();
+			if(!scrollEnabled)scrollHeaderImageDown();
 		});
 	}, 1000);
 
@@ -55,8 +57,10 @@ function expandHeader(){
 }
 
 function scrollHeaderImageDown(){
+	scrollEnabled = true;
 	var image = $('#articleImage');
 	var imageHeight = image.height();
+console.log("-="+(imageHeight-250)+"px");
 
 	image.animate({top:"-="+(imageHeight-250)+"px"}, 30000, function(){
 			scrollHeaderImageUp();
@@ -64,9 +68,10 @@ function scrollHeaderImageDown(){
 }
 
 function scrollHeaderImageUp(){
+	scrollEnabled = true;
 	var image = $('#articleImage');
 	var imageHeight = image.height();
-
+console.log("+="+(imageHeight-250)+"px");
 	image.animate({top:"+="+(imageHeight-250)+"px"}, 30000, function(){
 		scrollHeaderImageDown();
 	});
