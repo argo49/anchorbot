@@ -10,6 +10,32 @@
 //////////////////////////////////////
 
 
+function generateAlchemyDump($url){
+if(filter_var($url, FILTER_VALIDATE_URL) === TRUE){
+
+	$file_headers = @get_headers($searchTerm);
+	
+	//if the URL doesn't exist, shit hits the fan and we return an error
+	if($file_headers[0] == 'HTTP/1.1 404 Not Found') {
+		echo json_encode($return = array("status"=>"fail","message"=>"Sorry, that URL doesn't seem to exist (Error 404)"); );
+		exit();
+	}
+}
+	//Use the AlchemyAPI to get 6 keywords of the article, so we can search other news outlets
+	require_once 'lib/php/alchemyapi.php';
+    $alchemyapi = new AlchemyAPI();
+	$responseKeywords = $alchemyapi->entities('url', , array("showSourceText"=>1));
+
+	
+	
+	$output = urlencode("alchemy-".md5(time('ru').mt_rand()).".json");
+	
+	
+	$myFile = "temp/".$output;
+	$fh = fopen($myFile, 'w') or die("can't open file");
+	fwrite($fh, json_encode($responseKeywords));
+	fclose($fh);
+}
 function scrapeAndSave($url,$output){
 //Scraper code!
 require('lib/php/simple_html_dom.php');
@@ -35,7 +61,7 @@ require('lib/php/simple_html_dom.php');
 	$jsonReturn = json_encode($jsonReturn);
 	
 	//save the file
-	$myFile = $output;
+	$myFile = "temp/".$output;
 	$fh = fopen($myFile, 'w') or die("can't open file");
 	fwrite($fh, $jsonReturn);
 	fclose($fh);
@@ -94,7 +120,14 @@ if (count($results) > 0){
 }
 //Get URL of first search term
 $url = $results[0]->Url;
+
+//make an alchemyDump
+generateAlchemyDump($url);
+
+//make unique filename
 $output = urlencode(md5(time('ru').mt_rand())).".json";
+
+//make a raw text dump (each paragraph is an JSON array element)
 scrapeAndSave($url,$output);
 
 
