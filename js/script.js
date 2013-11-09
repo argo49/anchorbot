@@ -2,10 +2,27 @@ $(window).load(function(){
 	console.log($('#content').length)
 
 	// User Clicks Search
-	$('#searchButton').on('click', function(){
+	$('#searchButton').one('click', function(){
+		var query = $('#searachInput').val();
+		console.log("Query: " + query);
+
+		var dimmer = $('#dimmer');
+		dimmer.addClass('active');
+		shrinkHeader();
+
+		window.setTimeout(function() {
+			$('#placeholder').remove();
+			$('#searchResults').fadeIn(2000, function(){
+				window.setTimeout(function() {dimmer.fadeOut(400);}, 400)
+			});
+		}, 1000);
+
+
+
 		// bing/webscrape
 		$.ajax();
-		shrinkHeader();
+
+
 
 	});
 
@@ -14,15 +31,11 @@ $(window).load(function(){
 
 function shrinkHeader(){
 	var header = $('#header');
-	var searchBox = $('#mainSearch');
 	header.animate({paddingTop:"20px"});
-	searchBox.animate({borderBottom:'1px solid #DDD'});
 }
 
 function expandHeader(){
 	var header = $('#header');
-	var searchBox = $('#mainSearch');
-	header.animate({paddingTop:"250px"});
-	searchBox.animate({borderBottom:'none'});
-
+	header.animate({paddingTop:"+=230px"});
 }
+

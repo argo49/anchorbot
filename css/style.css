@@ -1,11 +1,27 @@
 *{
 	padding: 0 0 0 0;
 	margin : 0 0 0 0;
+	font-family: "Aaargh";
 }
 
 body, html{
 	height:100%;
 }
+
+hr{
+	color: #DDD;
+	background-color: #DDD;
+	border: 0;
+	height: 1px;
+}
+
+p{
+	text-indent: 25px;
+	font-size: 20px;
+}
+
+
+
 
 #content{
 	height:100%;
@@ -33,6 +49,31 @@ body, html{
 	width:100%;
 }
 
+#mainSearch{
+	padding-bottom: 20px;
+}
+
+#resultsContainer{
+	padding: 0 150px;
+}
+
+#articleImage{
+	width: 100%;
+}
+
+#articleImageContainer{
+	height: 250px;
+	overflow: hidden;
+	margin-bottom: 20px;
+}
+
+#article{
+	margin: 0 15px;
+}
+
+
+
+
 .container{
 	text-align:center;
 	vertical-align: middle;
@@ -40,6 +81,14 @@ body, html{
 
 .container .element{
 	display:inline-block;
+}
+
+.noMargin{
+	margin: 0 !important;
+}
+
+.noShadow{
+	box-shadow: none !important;
 }
 
 @font-face {
