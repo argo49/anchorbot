@@ -3,8 +3,9 @@ $(window).load(function(){
 
 	// User Clicks Search
 	$('#searchButton').one('click', function(){
-		var query = $('#searachInput').val();
-		console.log("Query: " + query);
+		var query = $('#searchInput').val();
+
+		console.log($('#searchInput').length + " Query: " + query);
 
 		var dimmer = $('#dimmer');
 		dimmer.addClass('active');
@@ -20,7 +21,12 @@ $(window).load(function(){
 
 
 		// bing/webscrape
-		$.ajax();
+		$.ajax({
+			url: "scraper.php",
+			type: "POST",
+			data: "searchTerm=" + query
+
+		});
 
 
 
@@ -28,6 +34,10 @@ $(window).load(function(){
 
 
 });
+
+function scraperSuccess(){
+
+}
 
 function shrinkHeader(){
 	var header = $('#header');
