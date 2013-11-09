@@ -1,0 +1,1290 @@
+<pre>
+array(3) {
+  ["value"]=>
+  array(0) {
+  }
+  ["content"]=>
+  array(0) {
+  }
+  [0]=>
+  string(46536) "
+
+
+With elections looming, Obamacare rattling Democratic nerves - CNN.com
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+var cnnCurrTime=new Date(1383961058000),
+cnnCurrHour=20,
+cnnCurrMin=37,
+cnnCurrDay="Fri",
+cnnIsIntl=false,
+clickID=211911,
+cnn_cvpAdpre="",
+cnnCVPAdSectionT1="cnn.com_politics_t1",
+cnnCVPAdSectionInPage="cnn.com_politics_inpage",
+cnnShareUrl="%2F2013%2F11%2F08%2Fpolitics%2Fobamacare-nervous-democrats%2Findex.html",
+cnnShareTitle="With%20elections%20looming%2C%20Obamacare%20rattling%20Democratic%20nerves",
+cnnShareDesc="",
+cnnFirstPub=new Date('Friday Nov 8 12:07:23 EST 2013'),
+cnnSectionName="politics",
+sectionName="politics",
+cnnSubSectionName="pol : news",
+cnnPageType="Story",
+cnnBrandingValue="default";
+cnnPartnerValue="";
+cnnOmniBranding="",
+cnnAuthor="Tom Cohen, CNN",
+disqus_category_id=207582,
+disqus_identifier="/2013/11/08/politics/obamacare-nervous-democrats/index.html",
+disqus_title="With elections looming, Obamacare rattling Democratic nerves",
+cnn_edtnswtchver="www",
+cnnIsStoryPage=true,
+cnn_metadata = {},
+cnn_shareconfig = [];
+cnn_metadata = {
+section: [
+"politics",
+"pol : news"
+],
+friendly_name: "With elections looming, Obamacare rattling Democratic nerves",
+template_type: "content",
+template_type_content: "",
+business: {
+cnn: {
+page: {
+author: "Tom Cohen, CNN",
+broadcast_franchise: "",
+video_embed_count: "10",
+publish_date: "2013/11/08",
+photo_gallery: "With elections looming, Obamacare rattling Democratic nerves"
+},
+video: {
+video_player: ""
+}
+}
+},
+user: {
+authenticated: "",
+segment: {
+age: "",
+zip: "",
+gender: ""
+}
+}
+};
+if (typeof(cnnOmniPartner) !== "undefined") {
+if (cnn_metadata.template_type_content === "") {
+cnn_metadata.template_type_content = "partner";
+}
+}
+var photo_gallery = "With elections looming, Obamacare rattling Democratic nerves";
+
+
+
+if(typeof CNN==='undefined'){var CNN=Class.create();}
+CNN.expandableMap=[''];
+function _loginOptions(){};
+var disqus_url=(typeof disqus_identifier!=='undefined') ? 'http://www.cnn.com/2013/11/08/politics/obamacare-nervous-democrats/index.html' : 'http://www.cnn.com'+location.pathname;
+cnnad_newTileIDGroup(['607x95_adlinks','336x280_adlinks']);
+
+
+
+
+
+
+         SET EDITION: &nbsp;U.S. INTERNATIONAL M&#201;XICO ARABIC    TV: &nbsp; CNN CNNi CNN en Espa&#241;ol HLN      Sign up Log in                Home TV &amp; Video CNN Trends U.S. World Politics Justice Entertainment Tech Health Living Travel Opinion iReport Money Sports    
+
+
+
+CSIManager.getInstance().call('/.element/ssi/www/breaking_news/3.0/banner.html','','cnnBannerContainer',cnnRenderDomesticBanner);
+
+
+
+
+
+
+
+
+
+
+
+SHARE THIS
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Print
+Email
+More sharing
+
+
+Reddit
+
+
+StumbleUpon
+
+
+Delicious
+
+
+
+
+
+
+
+
+
+
+/* push in config for this share instance */
+cnn_shareconfig.push({
+"id" : "cnn_sharebar1",
+"url" : "http://www.cnn.com/2013/11/08/politics/obamacare-nervous-democrats/index.html",
+"title" : "With elections looming, Obamacare rattling Democratic nerves"
+});
+
+
+With elections looming, Obamacare rattling Democratic nerves
+
+
+
+By Tom Cohen, CNN
+updated 5:29 PM EST, Fri November 8, 2013
+
+
+
+
+
+
+
+
+
+
+
+window.jQuery(document).ready(function() {
+window.CNNVIDEOS = window.CNNVIDEOS || {};
+CNNVIDEOS[ 'T1' ] = CNNVIDEO( 'cnnCVP1', {
+video: 'bestoftv/2013/11/08/sot-sebelius-health-coverage.cnn',
+thumb: 'http://i2.cdn.turner.com/cnn/dam/assets/131108145219-sot-sebelius-health-coverage-00002430-story-top.jpg',
+preset: 'storypage',
+diagnostics: {
+section: 'articlepage',
+placement: 'page-top'
+},
+network: 'cnn',
+adsection: cnnCVPAdSectionT1 || '',
+headline: 'Sebelius: No specific plan at this point',
+videoSource: 'CNN',
+videoSourceUrl: '',
+url: ''
+});
+// pause other videos playing on page
+window.jQuery( '#cnnCVP1' ).on( 'onContentBegin', function( e, obj ) {
+for ( var instance in window.CNNVIDEOS ) {
+if ( instance !== 'T1' && window.CNNVIDEOS.hasOwnProperty( instance ) ) {
+try { window.CNNVIDEOS[ instance ].pause(); } catch(e){}
+}
+}
+});
+});
+
+
+
+STORY HIGHLIGHTS
+
+
+Four things causing Democrats to be nervous about Obamacare troubles
+All 435 House seats and 33 Senate seats will be decided in the 2014 elections
+Obama's broken promise on keeping coverage raises concerns
+Relentless GOP attacks question if health care reforms are manageable
+
+
+
+
+
+
+
+
+cnnad_createAd("179cc9ea480c1691","http://ads.cnn.com/html.ng/site=cnn&cnn_position=150x90_spon1&cnn_rollup=us&page.allowcompete=no&params.styles=fs","90","150");
+cnnad_registerSpace("179cc9ea480c1691","150","90");
+
+
+
+
+Washington (CNN) -- Quick, can you hear it? That creaking sound from Washington is the nerves of congressional Democrats in response to the political firestorm raging around Obamacare.
+The botched rollout of the Affordable Care Act's vital new marketplaces, coupled with insurers notifying more than a million Americans that their policies were being canceled, raised questions about the administration competence and honesty in selling and implementing President Barack Obama's signature health care reforms.
+After Obama's apology, talk of solutions and -- still -- the website
+Republicans still licking their wounds after last month's failed bid to dismantle Obamacare by shutting down the government got a new chance to attack, keeping the issue in national headlines because of the problems rather than a successful launch of the enrollment process.
+Issa accused of selectively leaking Obamacare documents
+GOP moves past troubled website
+Obama apologized on Thursday night in an interview with NBC and said unspecified steps would be taken to help those losing coverage.
+However, some Democrats facing re-election battles next year are joining Republicans in calling for the administration to delay provisions of the 2010 law that survived a Supreme Court challenge last year.
+Vulnerable Senate Dems voice concerns to Obama, Biden
+Here are four reasons why Democrats are nervous:
+
+var currExpandable="expand111";
+if(typeof CNN.expandableMap==='object'){CNN.expandableMap.push(currExpandable);}
+var mObj={};
+mObj.type='video';
+mObj.contentId='';
+mObj.network='cnn';
+mObj.source='bestoftv/2013/11/08/obama-apologizes-jones-newday.cnn';
+mObj.videoSource='CNN';
+mObj.videoSourceUrl='http://newday.blogs.cnn.com/';
+mObj.lgImage="http://i2.cdn.turner.com/cnn/dam/assets/131107212249-obama-obamacare-dallas-gi-story-body.jpg";
+mObj.lgImageX=300;
+mObj.lgImageY=169;
+mObj.origImageX="214";
+mObj.origImageY="120";
+mObj.contentType='video';
+CNN.expElements.expand111Store=mObj;
+
+
+
+
+Obama 'sorry' people lost health plans
+
+
+var currExpandable="expand211";
+if(typeof CNN.expandableMap==='object'){CNN.expandableMap.push(currExpandable);}
+var mObj={};
+mObj.type='video';
+mObj.contentId='';
+mObj.network='cnn';
+mObj.source='politics/2013/11/08/erin-sot-obama-obamacare-apology.cnn';
+mObj.videoSource='CNN';
+mObj.videoSourceUrl='http://outfront.blogs.cnn.com/';
+mObj.lgImage="http://i2.cdn.turner.com/cnn/dam/assets/131107194449-erin-sot-obama-obamacare-apology-00003504-story-body.jpg";
+mObj.lgImageX=300;
+mObj.lgImageY=169;
+mObj.origImageX="214";
+mObj.origImageY="120";
+mObj.contentType='video';
+CNN.expElements.expand211Store=mObj;
+
+
+
+
+President Obama: 'I am sorry'
+
+
+var currExpandable="expand311";
+if(typeof CNN.expandableMap==='object'){CNN.expandableMap.push(currExpandable);}
+var mObj={};
+mObj.type='video';
+mObj.contentId='';
+mObj.network='cnn';
+mObj.source='politics/2013/11/08/when-presidents-apologize.cnn';
+mObj.videoSource='CNN';
+mObj.videoSourceUrl='';
+mObj.lgImage="http://i2.cdn.turner.com/cnn/dam/assets/131108142624-when-presidents-apologize-00005427-story-body.jpg";
+mObj.lgImageX=300;
+mObj.lgImageY=169;
+mObj.origImageX="214";
+mObj.origImageY="120";
+mObj.contentType='video';
+CNN.expElements.expand311Store=mObj;
+
+
+
+
+When presidents say 'I'm sorry'
+
+
+var currExpandable="expand411";
+if(typeof CNN.expandableMap==='object'){CNN.expandableMap.push(currExpandable);}
+var mObj={};
+mObj.type='video';
+mObj.contentId='';
+mObj.network='cnn';
+mObj.source='bestoftv/2013/11/08/ac-obama-interview-sebelius.cnn';
+mObj.videoSource='CNN';
+mObj.videoSourceUrl='ac360.blogs.cnn.com';
+mObj.lgImage="http://i2.cdn.turner.com/cnn/dam/assets/131107204852-ac-obama-interview-sebelius-00002416-story-body.jpg";
+mObj.lgImageX=300;
+mObj.lgImageY=169;
+mObj.origImageX="214";
+mObj.origImageY="120";
+mObj.contentType='video';
+CNN.expElements.expand411Store=mObj;
+
+
+
+
+Does Sec. Sebelius still have a job? 
+
+Website woes
+The major problem has been the failure of the HealthCare.gov website that was set up to enroll people in new Obamacare health insurance exchanges starting on October 1.
+Instead of a comprehensive online portal for uninsured people or those who buy individual coverage to readily shop for policies online, the website became a symbol of government failure when most early visitors couldn't log in, got constant error messages, faced long delays and had their profiles disappear.
+CMS staffer points to improvements in flawed site
+A public relations nightmare ensued, with the administration the butt of national jokes. A spoof song at Wednesday's CMA Awards show lampooned the wait faced by people trying to use the website, with co-hosts Brad Paisley and Carrie Underwood singing: "I'm going to wind up with hemorrhoids, if I sit here 'til dawn."
+But the actual damage has been much more significant.
+The health care reforms depend on full public participation to create large markets that reflect the broad public spectrum -- including both less-expensive younger people and more expensive older folks -- as well as more competition for the increased business.
+What else could go wrong with Obamacare?
+HealthCare.gov was supposed to be both the main source of public information and the main vehicle for signing people up. Its early failures made the tough challenge of launching the markets appear insurmountable.
+At a series of committee hearings in recent weeks, Democratic legislators joined Republicans in lambasting the Obama administration for the malfunctioning website. They called the problems and the government's failure to anticipate them unacceptable, and demanded fast action to get HealthCare.gov functioning smoothly.
+"This is the 21st Century," Democratic Rep. Anna Eshoo of California told a House Energy and Commerce Committee hearing on October 24.
+She rejected an administration contention that initial website volume was higher than expected, noting that Amazon and Ebay don't crash days before Christmas and ProFlowers doesn't crash just before Valentine's Day.
+The administration says it will have the Obamacare website running smoothly for the "vast majority of users" by November 30, though it warns the first enrollment figures coming out next week will be far lower than expected.
+"They were always going to be low," White House spokesman Jay Carney told reporters on Thursday. "And that was even when we did not expect the problems with the website that occurred."
+At the same time, Carney noted the enrollment period runs through March, adding that a fully functioning website by the end of November would leave plenty of time for people to enroll for required coverage under the law.
+CNNMoney: Obamacare deadlines clarified
+Both supporters and detractors acknowledge that continued website problems beyond November 30 would be a major problem threatening the goal of robust enrollment by the end of March.
+
+var currExpandable="expand128";
+if(typeof CNN.expandableMap==='object'){CNN.expandableMap.push(currExpandable);}
+var mObj={};
+mObj.type='video';
+mObj.contentId='';
+mObj.network='cnn';
+mObj.source='bestoftv/2013/11/07/obamacare-democrats-keilar-newday.cnn';
+mObj.videoSource='CNN';
+mObj.videoSourceUrl=' http://newday.blogs.cnn.com/';
+mObj.lgImage="http://i2.cdn.turner.com/cnn/dam/assets/120523022221-senator-max-baucus-story-body.jpg";
+mObj.lgImageX=300;
+mObj.lgImageY=169;
+mObj.origImageX="214";
+mObj.origImageY="120";
+mObj.contentType='video';
+CNN.expElements.expand128Store=mObj;
+
+
+
+
+Democrats on edge over Obamacare 
+
+
+var currExpandable="expand228";
+if(typeof CNN.expandableMap==='object'){CNN.expandableMap.push(currExpandable);}
+var mObj={};
+mObj.type='video';
+mObj.contentId='';
+mObj.network='cnn';
+mObj.source='us/2013/11/07/bts-obama-obamacare-site-remarks-texas.cnn';
+mObj.videoSource='CNN';
+mObj.videoSourceUrl='http://www.cnn.com/POLITICS/';
+mObj.lgImage="http://i2.cdn.turner.com/cnn/dam/assets/131106195532-bts-obama-obamacare-site-remarks-texas-00013405-story-body.jpg";
+mObj.lgImageX=300;
+mObj.lgImageY=169;
+mObj.origImageX="214";
+mObj.origImageY="120";
+mObj.contentType='video';
+CNN.expElements.expand228Store=mObj;
+
+
+
+
+Obama: Website woes fixed by Nov. 30
+
+
+var currExpandable="expand328";
+if(typeof CNN.expandableMap==='object'){CNN.expandableMap.push(currExpandable);}
+var mObj={};
+mObj.type='video';
+mObj.contentId='';
+mObj.network='cnn';
+mObj.source='politics/2013/11/06/atw-johns-sebelius-obamacare-documents.cnn';
+mObj.videoSource='CNN';
+mObj.videoSourceUrl='http://newsroom.blogs.cnn.com/category/anchors/suzanne-malveaux/';
+mObj.lgImage="http://i2.cdn.turner.com/cnn/dam/assets/131106123010-atw-johns-sebelius-obamacare-documents-00001601-story-body.jpg";
+mObj.lgImageX=300;
+mObj.lgImageY=169;
+mObj.origImageX="214";
+mObj.origImageY="120";
+mObj.contentType='video';
+CNN.expElements.expand328Store=mObj;
+
+
+
+
+Sebelius grilled on Affordable Care Act
+
+
+var currExpandable="expand428";
+if(typeof CNN.expandableMap==='object'){CNN.expandableMap.push(currExpandable);}
+var mObj={};
+mObj.type='video';
+mObj.contentId='';
+mObj.network='cnn';
+mObj.source='bestoftv/2013/11/06/obamacare-burton-newday.cnn';
+mObj.videoSource='CNN';
+mObj.videoSourceUrl=' http://newday.blogs.cnn.com/';
+mObj.lgImage="http://i2.cdn.turner.com/cnn/dam/assets/131106084436-obamacare-burton-newday-00004729-story-body.jpg";
+mObj.lgImageX=300;
+mObj.lgImageY=169;
+mObj.origImageX="214";
+mObj.origImageY="120";
+mObj.contentType='video';
+CNN.expElements.expand428Store=mObj;
+
+
+
+
+Obama tweaks health care pledge
+
+The law itself
+The bigger fear for Democrats is that public sentiment will side with Republicans who have warned for four years that Obamacare amounted to big government run amok, resulting in an unmanageable new bureaucracy.
+Regardless of how things turn out, the perception so far is that the administration's inability to effectively launch a crucial part of the Affordable Care Act might foreshadow further problems down the road.
+GOP on insurance cancellations: 'We told you so'
+Obama sought to blunt that argument in the NBC interview, saying the goal of the health care reforms -- making affordable coverage available to millions of uninsured and underinsured people -- remained crucial and that the reforms he championed were the best way to pursue it.
+"I think we, in good faith, have been trying to take on a health care system that has been broken for a very long time," the President said. "And what we've been trying to do is to change it in the least disruptive way possible."
+However, the biggest disruption to date -- cancellation notices to a small percentage of Americans after Obama repeatedly promised they could keep coverage they liked -- provided strong ammunition for strong GOP attacks that put the President and Democrats on defense.
+"Despite Democrats' promises, millions of families are losing their insurance, losing access to their doctors, or being forced to pay more for insurance," Republican National Committee Chairman Reince Priebus said Friday in trying to link the issue to a stronger-than-expected October jobs report. "Their household economies are taking a hit, and Obamacare has made life more uncertain for them."
+Obama's apology addressed the cancellation notices received by some among the 5% of Americans who buy their own individual health insurance instead of getting coverage through their jobs or government programs such as Medicare and Medicaid like 80% of the population.
+"Even though it's a small percentage of folks who may be disadvantaged, you know, it means a lot to them. And it's scary to them," he said. "And I am sorry that they-- you know, are finding themselves in this situation, based on assurances they got from me."
+On Friday, Health and Human Services Secretary Kathleen Sebelius said the administration was "looking at a number of options" on how to help people with canceled policies, "but there isn't any specific proposal at the table immediately."
+White House spokesman Josh Earnest told reporters Friday that Obama "has directed his team to consider some administrative solutions to those problems," but he also emphasized the need to better educate Americans with canceled policies on the options they have for getting more comprehensive coverage.
+Carney said Thursday that Democratic concerns focused on the website problems rather than the guts of the reforms.
+"Every one of the Democrats who voted for this and believed in it and fought for it, and with the president, defended it against the constant assault by Republicans and outside opponents, continue to believe in it, and believe it's the right thing to do," he said.
+
+var currExpandable="expand142";
+if(typeof CNN.expandableMap==='object'){CNN.expandableMap.push(currExpandable);}
+var mObj={};
+mObj.type='video';
+mObj.contentId='';
+mObj.network='cnn';
+mObj.source='bestoftv/2013/11/07/nr-hammer-cmas-obamacare-riff.cnn';
+mObj.videoSource='CNN';
+mObj.videoSourceUrl='www.cnn.coom ';
+mObj.lgImage="http://i2.cdn.turner.com/cnn/dam/assets/131107105335-nr-hammer-cmas-obamacare-riff-00003205-story-body.jpg";
+mObj.lgImageX=300;
+mObj.lgImageY=169;
+mObj.origImageX="214";
+mObj.origImageY="120";
+mObj.contentType='video';
+CNN.expElements.expand142Store=mObj;
+
+
+
+
+CMA hosts riff on Obamacare 
+
+
+.cnnArticleGalleryNav{border:1px solid #000;cursor:pointer;float:left;height:25px;text-align:center;width:25px}
+.cnnArticleGalleryNavOn{background-color:#C03;border:1px solid #000;float:left;height:25px;text-align:center;width:20px}
+.cnnArticleGalleryNavDisabled{background-color:#222;border:1px solid #000;color:#666;float:left;height:25px;text-align:center;width:25px}
+.cnnArticleExpandableTarget{background-color:#000;display:none;position:absolute}
+.cnnArticlePhotoContainer{height:122px;width:214px}
+.cnnArticleBoxImage{cursor:pointer;height:122px;padding-top:0;width:214px}
+.cnnArticleGalleryCaptionControl{background-color:#000;color:#FFF}
+.cnnArticleGalleryCaptionControlText{cursor:pointer;float:right;font-size:10px;padding:3px 10px 3px 3px}
+.cnnArticleGalleryPhotoContainer cite{background:none repeat scroll 0 0 #000;bottom:48px;color:#FFF;height:auto;left:420px;opacity:.7;position:absolute;width:200px;padding:10px}
+.cnnArticleGalleryClose{background-color:#fff;display:block;text-align:right}
+.cnnArticleGalleryCloseButton{cursor:pointer}
+.cnnArticleGalleryNavPrevNext span{background-color:#444;color:#CCC;cursor:pointer;float:left;height:23px;text-align:center;width:26px;padding:4px 0 0}
+.cnnArticleGalleryNavPrevNextDisabled span{background-color:#444;color:#666;float:left;height:23px;text-align:center;width:25px;padding:4px 0 0}
+.cnnVerticalGalleryPhoto{padding-right:68px;width:270px;margin:0 auto}
+.cnnGalleryContainer{float:left;clear:left;margin:0 0 20px;padding:0 0 0 10px}
+
+
+if (typeof cnnArticleGallery == "undefined") {
+var cnnArticleGallery = {};
+}
+if(typeof cnnArticleGallery.currentImageList =="undefined"){
+cnnArticleGallery.currentImageList = [];
+}
+var expGallery422=new ArticleExpandableGallery();
+expGallery422.setImageCount(18);
+
+
+//cnn_adbptrackpgalimg("Key players in the health care hearings", 1);
+
+
+
+
+
+
+
+
+
+
+Rep. Darrell Issa, R-California, is the chairman of the House Government Oversight Committee. On October 31, Issa's committee issued a document subpoena to Health and Human Services Secretary Kathleen Sebelius for documents and information related to HealthCare.gov. "I've lost my patience," Issa said to CNN's Wolf Blitzer in explaining the decision to use a subpoena. Issa also said his committee has sent a document subpoena to website contractor Optum/QSSI. 
+cnnArticleGallery.currentImageList[cnnArticleGallery.currentImageList.length] = {"currentPicture":true,"x":42,"y":2,"pos":1,"title":"Key players in the health care hearings"}
+
+
+
+
+
+Speaking soon after the Health and Human Services secretary testified before Congress on October 30, President Obama took responsibility for fixing the troubled Obamacare site. "I'm not happy about it and neither are a lot of Americans who need health care," Obama said at a Boston rally. "There is no excuse for it and I take full responsibility for making sure it gets fixed ASAP. We are working overtime to improve it every day."
+cnnArticleGallery.currentImageList[cnnArticleGallery.currentImageList.length] = {"currentPicture":false,"x":42,"y":2,"pos":2,"title":"Key players in the health care hearings"}
+
+
+
+
+
+Amid Republican calls for her resignation, Health and Human Services Secretary Kathleen Sebelius provided a personal mea culpa October 30 as she testified before the House Energy and Commerce Committee. "In these early weeks, access to HealthCare.gov has been a miserably frustrating experience for way too many Americans," she said. Speaking directly to Americans confronting the site problems, Sebelius added: "You deserve better. I apologize. I'm accountable to you for fixing these problems."
+cnnArticleGallery.currentImageList[cnnArticleGallery.currentImageList.length] = {"currentPicture":false,"x":42,"y":2,"pos":3,"title":"Key players in the health care hearings"}
+
+
+
+
+
+Marilyn Tavenner is the administrator of the Centers for Medicare & Medicaid Services, which is part of HHS. Tavenner testified October 29 before the House Ways and Means Committee about the Obamacare enrollment website and became the first administration official to apologize for the site's performance problems. "I want to apologize to you that the website does not work as well as it should," she said, adding that HealthCare.gov "can and will be fixed."
+cnnArticleGallery.currentImageList[cnnArticleGallery.currentImageList.length] = {"currentPicture":false,"x":42,"y":2,"pos":4,"title":"Key players in the health care hearings"}
+
+
+
+
+
+Rep. Fred Upton, R-Michigan, is the chairman of the House Energy and Commerce Committee, the first congressional committee to hold hearings on the troubled Obamacare enrollment site. Upton opened the committee's October 30 hearing by saying news about Obamacare "seems to get worse by the day." "Americans are scared," he said. At a previous hearing, Upton called the launch of the website "nothing short of a disaster."
+cnnArticleGallery.currentImageList[cnnArticleGallery.currentImageList.length] = {"currentPicture":false,"x":42,"y":2,"pos":5,"title":"Key players in the health care hearings"}
+
+
+
+
+
+Rep. Henry Waxman, D-California, is the top Democrat on the House Energy and Commerce Committee. During the committee's October 30 hearing Waxman said that "the worst abuses of the insurance industry will be halted" by Obamacare. The California Democrat said the health care law's reforms mean better plans are available at lower premiums, and he urged his Republican colleagues to "stop hyperventilating" about problems with the website.
+cnnArticleGallery.currentImageList[cnnArticleGallery.currentImageList.length] = {"currentPicture":false,"x":42,"y":2,"pos":6,"title":"Key players in the health care hearings"}
+
+
+
+
+
+Rep. Mike Rogers, R-Michigan, sits on the House Energy and Commerce Committee and is also the chairman of the House Intelligence Committee. During Sebelius' October 30 testimony, Rogers accused the HHS secretary of putting the private information of Americans at risk by failing to properly test security measures on the Obamacare enrollment site. "This is a completely unacceptable level of security," he said. "You know it's not secure."
+cnnArticleGallery.currentImageList[cnnArticleGallery.currentImageList.length] = {"currentPicture":false,"x":42,"y":2,"pos":7,"title":"Key players in the health care hearings"}
+
+
+
+
+
+Rep. Steve Scalise, R-Louisiana, leads the Republican Study Committee, a caucus of conservatives in the House of Representatives. Scalise has an undergraduate degree in computer science and is a former systems engineer. During an October 24 hearing of the House Energy and Commerce Committee, Scalise told witnesses, "There's a saying in computer programming: 'Garbage in, garbage out.'"
+cnnArticleGallery.currentImageList[cnnArticleGallery.currentImageList.length] = {"currentPicture":false,"x":42,"y":2,"pos":8,"title":"Key players in the health care hearings"}
+
+
+
+
+
+Rep. Frank Pallone, D-New Jersey, made waves on Twitter when he called the October 24 hearing on the Obamacare enrollment site's problems a "monkey court." Pallone made the comment when a Republican lawmaker at the hearing interrupted Pallone and asked him to yield his remaining allotted time to speak.
+cnnArticleGallery.currentImageList[cnnArticleGallery.currentImageList.length] = {"currentPicture":false,"x":42,"y":2,"pos":9,"title":"Key players in the health care hearings"}
+
+
+
+
+
+Cheryl Campbell is a senior vice president of CGI Federal, a contractor for the troubled website. "In principle, it worked," Campbell said at the October 24 hearing when asked by a lawmaker about the product her company delivered for use by the public on October 1. "It's not working great, and we're working to improve it. But it is enrolling people." After Campbell testified, CNN obtained a confidential September 2013 report from CGI to CMS that warned of a number of open risks and issues for the site even as company executives were testifying publicly that the project had achieved key milestones.
+cnnArticleGallery.currentImageList[cnnArticleGallery.currentImageList.length] = {"currentPicture":false,"x":42,"y":2,"pos":10,"title":"Key players in the health care hearings"}
+
+
+
+
+
+Andrew Slavitt is group executive vice president of Optum/QSSI, another contractor for the site. "The system didn't receive adequate end-to-end testing," Slavitt told lawmakers on October 24. Soon after Slavitt testified, his company was named by the Obama administration as the new general contractor charged with overseeing efforts to fix HealthCare.gov.
+cnnArticleGallery.currentImageList[cnnArticleGallery.currentImageList.length] = {"currentPicture":false,"x":42,"y":2,"pos":11,"title":"Key players in the health care hearings"}
+
+
+
+
+
+Lynn Spellecy, corporate counsel of website contractor Equifax Workforce Solutions, testified before the House Energy and Commerce Committee on October 24.
+cnnArticleGallery.currentImageList[cnnArticleGallery.currentImageList.length] = {"currentPicture":false,"x":42,"y":2,"pos":12,"title":"Key players in the health care hearings"}
+
+
+
+
+
+John Lau, program director of website contractor Serco, also appeared before the House Energy and Commerce Committee on October 24.
+cnnArticleGallery.currentImageList[cnnArticleGallery.currentImageList.length] = {"currentPicture":false,"x":42,"y":2,"pos":13,"title":"Key players in the health care hearings"}
+
+
+
+
+
+Rep. Dave Camp, R-Michigan, is the chairman of the House Ways and Means Committee. During the committee's October 29 hearing, Camp raised concerns about the administration's projection of initial low enrollment in Obamacare's new exchanges. "I fear we can see a fundamental breakdown of the insurance market where premiums will skyrocket, pricing millions of Americans out of health care," Camp said to CMS Administrator Marilyn Tavenner.
+cnnArticleGallery.currentImageList[cnnArticleGallery.currentImageList.length] = {"currentPicture":false,"x":42,"y":2,"pos":14,"title":"Key players in the health care hearings"}
+
+
+
+
+
+Rep. Sander Levin, D-Michigan, is the top Democrat on the House Ways and Means Committee. 
+cnnArticleGallery.currentImageList[cnnArticleGallery.currentImageList.length] = {"currentPicture":false,"x":42,"y":2,"pos":15,"title":"Key players in the health care hearings"}
+
+
+
+
+
+Rep. Aaron Schock, R-Illinois, confronted Tavenner on October 29 with anecdotal evidence from a constituent about changes to the individual insurance market linked to the implementation of Obamacare, changes that undermine Obama's oft-repeated pledge that "if you like your plan, you can keep your plan." "She has health insurance that she likes. She's been paying her premium. She wants to keep it. But she can't," Schock said. "Isn't that a lie?"
+cnnArticleGallery.currentImageList[cnnArticleGallery.currentImageList.length] = {"currentPicture":false,"x":42,"y":2,"pos":16,"title":"Key players in the health care hearings"}
+
+
+
+
+
+Rep. Bill Pascrell, D-New Jersey lambasted Republicans on October 29 for choosing to pile on the website woes instead of working with Democrats to improve Obamacare. Pascrell pointed out that his party worked with the GOP to improve the Bush administration's Medicare prescription drug benefit even though Democrats opposed the new program. "We lost the policy fight" then but chose to help make the program work instead of trying to discredit or undermine it. "How many of you stood up to do that?" the Democrat asked of his GOP colleagues, "None. Zero. Zero."
+cnnArticleGallery.currentImageList[cnnArticleGallery.currentImageList.length] = {"currentPicture":false,"x":42,"y":2,"pos":17,"title":"Key players in the health care hearings"}
+
+
+
+
+
+Jeff Zients, former acting director of the White House Office of Budget and Management, has been tapped by the administration to provide advice to HHS as the federal agency works to resolve the problems with the Obamacare enrollment site.
+cnnArticleGallery.currentImageList[cnnArticleGallery.currentImageList.length] = {"currentPicture":false,"x":42,"y":2,"pos":18,"title":"Key players in the health care hearings"}
+
+
+
+
+
+Key players in the health care hearings
+Key players in the health care hearings
+Key players in the health care hearings
+Key players in the health care hearings
+Key players in the health care hearings
+Key players in the health care hearings
+Key players in the health care hearings
+Key players in the health care hearings
+Key players in the health care hearings
+Key players in the health care hearings
+Key players in the health care hearings
+Key players in the health care hearings
+Key players in the health care hearings
+Key players in the health care hearings
+Key players in the health care hearings
+Key players in the health care hearings
+Key players in the health care hearings
+Key players in the health care hearings
+HIDE CAPTION
+
+
+
+&lt;&lt;
+&lt;
+
+
+
+
+
+1
+
+
+
+
+
+2
+
+
+
+
+
+3
+
+
+
+
+
+4
+
+
+
+
+
+5
+
+
+
+
+
+6
+
+
+
+
+
+7
+
+
+
+
+
+8
+
+
+
+
+
+9
+
+
+
+
+
+10
+
+
+
+
+
+11
+
+
+
+
+
+12
+
+
+
+
+
+13
+
+
+
+
+
+14
+
+
+
+
+
+15
+
+
+
+
+
+16
+
+
+
+
+
+17
+
+
+
+
+
+18
+
+
+&gt;
+&gt;&gt;
+
+
+
+
+
+Key players in the health care hearings
+
+
+
+Election year politics
+By this time next year, voters will have decided races for all 435 House seats and 33 of the 100 Senate seats, including 21 now held by Democrats. With five Senate Democratic incumbents retiring, the 16 up for re-election are especially vulnerable to attack from the political right over Obamacare.
+Already, the conservative advocacy group Americans for Prosperity has spent more than $7.6 million in recent weeks on TV, radio and web ads attacking legislators who support Obamacare and applauding those against the reforms.
+Conservative group continues to pile money into anti-Obamacare ads
+AFP is partially funded by the billionaire industrialist Koch brothers, who have spent many millions of dollars to back conservative causes and candidates.
+One set of ads targeted Democratic Sen. Mary Landrieu of Louisiana, who is facing a tough re-election battle in the conservative-leaning state.
+Landrieu backed the Affordable Care Act, but now calls for Obama to make good on his pledge that people who like their policies can keep them.
+She announced last week that she will introduce legislation allowing people to maintain their current coverage into 2014 as long as they make the payments, saying: "A promise was made that if you like your health plan, you can keep it - and I will do everything I can to see that the promise is kept."
+At the same time, she echoed the administration's argument that most of the individual policy holders getting cancellation notices will get a better deal under Obamacare.
+"Many people may find better plans in the marketplaces that offer superior coverage for them at a good value and at a potentially lower cost," she said in the statement. "But if people want to keep their current plans, they should be able to do so."
+Landrieu flew with Obama to New Orleans on Friday, but she missed his speech on economic development due to what her office called long-scheduled events in Lake Charles. Obama praised her during his remarks for tireless advocacy on behalf of the people of Louisiana.
+She was one of 15 Democratic Senators, most of them facing re-election challenges in 2014, who met with Obama at the White House this week to discuss the Obamacare brouhaha.
+"There would not have been this meeting if you didn't have this group of Senators up in 2014," a Democratic staffer with knowledge of the event told CNN.
+Some who took part said they pushed Obama to make changes such as extending the deadline to enroll past March 31 or delay the fine for failing to do so.
+Sen. Mark Pryor of Arkansas said he told the President to "hold the individuals in charge accountable for these mistakes" involving the website and other issues, while Sen. Mark Begich of Alaska cited "an understandable crisis in confidence because the administration has yet to get" HealthCare.gov "off the ground."
+A separate meeting between White House staff and aides to House Democratic leaders was taking place Friday, according to a senior House Democratic aide.
+Meanwhile, Democratic Sen. Joe Manchin of West Virginia is teaming with Republican Sen. Mark Kirk of Illinois on a measure to effectively put off the requirement for everyone to obtain insurance for a year by delaying the fine for non-compliance.
+"This commonsense proposal simply allows Americans to take more time to browse and explore their options, making 2014 a true transition year," Manchin said in a joint statement with Kirk.
+At this point, the proposals amount to political posturing. The administration opposes any delay, even as it considers specific steps to help people facing canceled policies, and it was unlikely that any legislation that included major changes to Obamacare would pass the Senate or get signed by the President.
+"Delaying the Affordable Care Act wouldn't delay people's cancer or diabetes or Parkinson's," Sebelius told a Senate committee this week, adding that "for for millions of Americans, delay is not an option. People's lives depend on this."
+GOP scorched earth tactics
+The upcoming elections aside, Democrats also are contending with the no-holds-barred opposition by Republicans who seek any opportunity to call for getting rid of the health care reforms despised by Republicans.
+Going back to the debate on Obamacare that started in 2009, GOP legislators have fought it in committees and in both the House and Senate, with zero Republicans supporting the Affordable Care Act when it passed in 2010.
+Republican attorneys general helped mount the unsuccessful Supreme Court challenge against the reforms, and some GOP governors now have rejected federal money under Obamacare to expand Medicaid coverage for indigent people lacking health insurance.
+Obama criticized such resistance at speeches this week in two GOP-led states that have rejected the Medicaid expansion -- Texas and Louisiana. Joining the federal program would mean fewer uninsured people going to emergency rooms for their health care, which Obama said resulted in a "hidden tax" because hospitals pass the resulting extra costs on to everyone else.
+"It's the right thing to do for the health of our economies as a whole," he said. "It is a practical, pragmatic reason to do it that has nothing to do with politics or ideology."
+In Washington, meanwhile, the chairman of the House Ways and Means Committee issued a subpoena for the administration to turn over enrollment figures so far by Friday.
+Sebelius has said the first figures would be released next week, and there was no sign her department would budge.
+The GOP push for figures seeks to cast the botched rollout of the Obamacare website in the worst possible light. Sebelius and Carney have tried to downplay expectations by repeatedly saying the initial figures would be lower than expected.
+Both Obama and Sebelius repeatedly emphasize that the website problems have prevented consumers from getting the information they need about coverage options, possible government subsidies and other details that they insist would alleviate concerns.
+At the Senate hearing Wednesday, Sebelius implied without directly saying so that Republicans were failing to properly inform their constituents about the health care reforms.
+"I think that it is always welcome to have elected officials in their home states give information to constituents about what the law says, what their options are, what their benefits could be, what choices they have, and how to access the process," she said.
+Obamacare sign-up concerns congressional staff
+if(typeof CNN.expElements==='object'){CNN.expElements.init();}
+CNN' s Jim Acosta, Bryan Koenig and Ashley Killough contributed to this report.
+
+
+
+
+
+
+0
+Comments &raquo;
+
+
+
+SHARE THIS
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Print
+Email
+More sharing
+
+
+Reddit
+
+
+StumbleUpon
+
+
+Delicious
+
+
+
+
+
+
+
+
+
+
+
+
+/* push in config for this share instance */
+cnn_shareconfig.push({
+"id" : "cnn_sharebar2",
+"url" : "http://www.cnn.com/2013/11/08/politics/obamacare-nervous-democrats/index.html",
+"title" : "With elections looming, Obamacare rattling Democratic nerves"
+});
+
+
+
+
+
+
+
+
+
+cnnad_newTileIDGroup(['607x95_adlinks','336x280_adlinks']);
+
+
+
+
+cnnad_createAd("f15eb345cc179f41","http://ads.cnn.com/html.ng/site=cnn&cnn_pagetype=mmst&cnn_position=607x95_adlinks&cnn_rollup=politics&page.allowcompete=no&params.styles=fs","95","607");
+cnnad_registerSpace("f15eb345cc179f41","607","95");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+cnnad_createAd("1ec1ca901d75112f","http://ads.cnn.com/html.ng/site=cnn&cnn_pagetype=mmst&cnn_position=336x850_rgt&cnn_rollup=politics&page.allowcompete=no&params.styles=fs","850","336");
+cnnad_registerSpace("1ec1ca901d75112f","336","850");
+
+
+
+
+
+
+
+
+
+Part of complete coverage on 
+Obamacare
+
+
+Obamacare: Fewer options for many
+
+updated 6:41 PM EDT, Tue October 29, 2013
+
+
+
+
+Nationally, consumers are learning a number of well-known hospitals won't accept insurance under Obamacare.
+
+
+
+Everything you need to know
+
+updated 12:19 PM EDT, Mon October 21, 2013
+
+
+
+
+Open enrollment started October 1. Here's a step-by-step guide to navigating the insurance marketplaces, also known as exchanges.
+
+
+
+HealthCare.gov: What works, what doesn't
+
+updated 10:27 AM EDT, Tue October 22, 2013
+
+
+
+
+A host of issues have plagued the highly anticipated launch, making it difficult for both consumers and insurance providers.
+
+
+
+5 things since Obamacare launched
+
+updated 4:37 AM EDT, Sat October 19, 2013
+
+
+
+
+Obamacare has survived a Supreme Court appeal, a government shutdown and ongoing challenges by opposing politicians. With few exceptions, every American must have health insurance by March 31 or pay a penalty fee. 
+
+
+
+Your guide to health insurance terms
+
+updated 10:44 AM EDT, Thu September 26, 2013
+
+
+
+
+If you don't know what all those health insurance buzz-words like "co-pay" and "premium" mean, you're not alone. 
+
+
+
+Doctor shortage could crash system
+
+updated 5:37 PM EDT, Wed October 2, 2013
+
+
+
+
+Obamacare is expected to increase demand for medical services. That, plus a shortage of doctors, may mean the appointment has to wait.
+
+
+
+Young and healthy needed
+
+updated 11:57 AM EDT, Wed October 2, 2013
+
+
+
+
+Lauren Zanardelli and Graham Foster are the kind of customers the government needs to make Obamacare work. 
+
+
+
+Mystery surrounds the 'Obamacare Girl'
+
+updated 7:17 AM EDT, Tue October 22, 2013
+
+
+
+
+Who is the mystery "Obamacare Girl"? Jeanne Moos asks, how would YOU like to be the face of a dysfunctional website?
+
+
+
+Hope for a smoother ride on Healthcare.gov
+
+updated 9:29 PM EDT, Tue October 15, 2013
+
+
+
+
+For nearly two weeks, I was a failure -- a complete and utter failure. 
+
+
+
+RNC: We'll run on Obamacare in 2014
+
+updated 11:33 AM EDT, Sun August 11, 2013
+
+
+
+
+Reince Priebus said the GOP will campaign against what he describes as "European, socialist healthcare" in the upcoming election.
+
+
+
+CNN Fact Check: Obamacare
+
+
+
+
+
+It's a popular assertion, but is it true? The CNN Politics team hunts down the facts.
+
+
+
+Mapping out your new options
+
+
+
+
+
+Our map shows which states have expanded Medicaid and includes links to marketplace options.
+
+
+
+Most common Obamacare scams
+
+
+
+
+
+Some may offer help navigating the new health insurance marketplace for a fee. Others will warn that you will need a new Medicare card.
+
+
+
+Dr. Gupta: Just the Facts
+
+updated 12:57 PM EDT, Mon September 30, 2013
+
+
+
+
+Who's in, who's out... and what about the costs? CNN Chief Medical Correspondent Dr. Sanjay Gupta breaks down Obamacare.
+
+
+
+Exchanges aren't the only place to shop
+
+
+
+
+
+Consumers can avoid the exchanges by buying plans directly from insurers or through brokers. But should they? 
+
+
+
+Obamacare insurance rates
+
+
+
+
+
+Here's the first look at insurance premiums on 36 exchanges run by the federal government. 
+
+
+
+Opinion: There are tradeoffs 
+
+updated 10:46 AM EDT, Wed September 25, 2013
+
+
+
+
+If we want to be realistic about health care reform, we have to acknowledge that everything comes with a tradeoff, Dr. Aaron E. Carroll says.
+
+
+
+One-stop resource for Obamacare
+
+
+
+
+
+Check out our page with all things you need to know about Obamacare and how it will affect you.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.OB_SB_1, .OB_SB_2 { padding:0px; }
+#outbrain_container_1_stripBox .strip-like, #outbrain_container_2_stripBox .strip-like { font-size:18px; }
+#ob_strip_container_rel_1_stripBox { }
+#ob_strip_container_rel_1_stripBox .item-container, #ob_strip_container_rel_2_stripBox .item-container { padding-top:8px;border-top:1px solid #E5E5E5; }
+
+
+
+
+
+
+
+cnnad_createAd("ea1502098ec55266","http://ads.cnn.com/html.ng/site=cnn&cnn_pagetype=mmst&cnn_position=300x150_rgt&cnn_rollup=politics&page.allowcompete=no&params.styles=fs","150","300");
+cnnad_registerSpace("ea1502098ec55266","300","150");
+
+
+
+
+
+
+
+
+
+
+
+cnnad_createAd("718e92a456a9d02d","http://ads.cnn.com/html.ng/site=cnn&cnn_pagetype=mmst&cnn_position=336x280_adlinks&cnn_rollup=politics&page.allowcompete=no&params.styles=fs","280","336");
+cnnad_registerSpace("718e92a456a9d02d","336","280");
+
+
+
+
+
+
+
+
+                     Home | Video | CNN Trends | U.S. | World | Politics | Justice | Entertainment | Tech | Health | Living | Travel | Opinion | iReport | Money | Sports Tools &amp; widgets | RSS | Podcasts | Blogs | CNN mobile | My profile | E-mail alerts | Desktop Alerts | CNN shop | Site map | Contact us     CNN en ESPA&Ntilde;OL | CNN M&eacute;xico | CNN Chile | CNN Expansi&oacute;n &#1575;&#1604;&#1593;&#1585;&#1576;&#1610;&#1577; | &#26085;&#26412;&#35486; | T&uuml;rk&ccedil;e CNN TV | HLN | Transcripts |    &copy; 2013 Cable News Network. Turner Broadcasting System, Inc. All Rights Reserved. Terms of service | Privacy guidelines |  | Advertise with us | About us | Work for us | Help CNN Newsource | License Footage         cnnad_sendADMData();cnnad_ugsync();if(ms_isLoggedIn()){CNN_setCookie('CNN_member',true,854400,'/',document.domain);}  
+
+
+
+
+var jsmd=_jsmd.init(),pageURL=location.href.toLowerCase();
+if (pageURL.indexOf("/.element/ssi/ads.iframes/")==-1&&pageURL.indexOf("/doubleclick/dartiframe.html")==-1&&pageURL.indexOf("/search/")==-1){
+if (_jsmd.plugin.gQuery("refresh")){
+jsmd.trackMetrics("dynamic-autoRefresh","autorefresh","cnn-autorefresh");
+} else if (_jsmd.plugin.gQuery("is_LR")){
+} else if (cnn_metadata.template_type_content!="gallery"){
+jsmd.send();
+}
+}
+
+
+
+/*globals FOOTERTOOLS*/
+$j(window).load(function () {
+'use strict';
+FOOTERTOOLS.init();
+});
+
+
+/*globals CNN_CB, cnnsocial, cnnzite_mod, sectionName */
+/* configure apis to load and specify their callbacks */
+cnnsocial.setapiconfig([
+{
+'site' : 'facebook',
+'success' : function() {
+/* trigger connect-cnnsocial.js calls */
+window.cnn_fbAsyncInit();
+}
+},
+{ 'site' : 'twitter' }
+]);
+
+var _vrq = _vrq || [];
+var vrId = 6;
+if(cnn_edtnswtchver === 'edition'){
+vrId = 396;
+}
+_vrq.push(['id', vrId]);
+_vrq.push(['automate', false]);
+_vrq.push(['track', function(){}]);
+(function(d, a){
+var s = d.createElement(a),
+x = d.getElementsByTagName(a)[0];
+s.async = true;
+s.src = 'http://a.visualrevenue.com/vrs.js';
+x.parentNode.insertBefore(s, x);
+})(document, 'script');
+
+/* add the multiple config instance for sharebars */
+cnnsocial.share.setconfig(cnn_shareconfig);
+$j(document).ready(function () {
+'use strict';
+loadChartbeat("politics", "Tom Cohen, CNN");
+cnnzite_mod.init();
+CNN.initFlipperTicker();
+/* initialize cnnsocial */
+cnnsocial.init();
+});
+
+
+/* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+var disqus_shortname = 'cnn'; // required: replace example with your forum shortname
+/* * * DON'T EDIT BELOW THIS LINE * * */
+(function () {
+var s = document.createElement('script'); s.async = true;
+s.type = 'text/javascript';
+s.src = 'http://' + disqus_shortname + '.disqus.com/count.js';
+(document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+}());
+
+
+
+"
+}
+</pre>
