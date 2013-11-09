@@ -45,7 +45,7 @@ function toXml($data, $rootNodeName = 'data', $xml=null)
 			else 
 			{
 				// add single node.
-                                $value = $value;
+                                $value = htmlentities($value,ENT_XML1);
 				$xml->addChild($key,$value);
 			}
  
@@ -100,7 +100,7 @@ require_once('lib/php/simple_html_dom.php');
 	
 	foreach($paragraphs as $paragraph){
 	
-		$paragraphResult[] = htmlentities(strip_tags($paragraph->innertext),ENT_XML1);
+		$paragraphResult[] = strip_tags($paragraph->innertext);
 	
 	}
 	$jsonReturn["url"] = $url;
@@ -220,8 +220,27 @@ function searchByTerm($searchTerm){
 }
 function callJava($outputs){
 
-	var_dump($outputs);
-	var_dump($_SESSION['alchemy']);
+	//var_dump($outputs);
+	$savefile = md5(time('ru').mt_rand()).".result";
+	$outputString =$savefile." ";
+	foreach($outputs as $output){
+		$outputString = $outputString." ".$output;
+	}
+	//$command = "java -jar temp/Analyzer.jar ".$outputString;
+	$command = "java -version";
+	$status;
+	$response=array();
+	exec("env");
+	$exec = exec($command,$response, $status);
+	echo "$command";
+	echo "\n status: $status";
+	echo "\n response: ";
+	var_dump($response);
+	echo "----";
+	echo file_get_contents("temp/res".$savefile);
+	
+	
+	
 	unset($_SESSION['alchemy']);
 	session_destroy();
 
