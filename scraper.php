@@ -25,7 +25,8 @@ if(filter_var($url, FILTER_VALIDATE_URL) === TRUE){
 	require_once 'lib/php/alchemyapi.php';
     $alchemyapi = new AlchemyAPI();
 	$responseKeywords = $alchemyapi->entities('url', $url, array("showSourceText"=>1));
-
+	
+	$jsonResponse=trim(json_encode($responseKeywords));
 	
 	
 	$output = urlencode("alchemy-".md5(time('ru').mt_rand()).".json");
@@ -33,7 +34,7 @@ if(filter_var($url, FILTER_VALIDATE_URL) === TRUE){
 	
 	$myFile = "temp/".$output;
 	$fh = fopen($myFile, 'w') or die("can't open file");
-	fwrite($fh, json_encode($responseKeywords));
+	fwrite($fh, $jsonResponse);
 	fclose($fh);
 }
 function scrapeAndSave($url,$output){
@@ -116,10 +117,16 @@ $results = $response->d->results;
 
 var_dump($results);
 //if no articles found, return false
-
+if (count($results) < 0 ){
+	return false;
+}
 //Get URL of first search term
 
-$url = $results[0]->Url;
+if (!isset($results[0]->Url)){
+	return false;
+}else{
+	$url = $results[0]->Url;
+}
 
 //make an alchemyDump
 generateAlchemyDump($url);
@@ -178,13 +185,15 @@ if(preg_match($reg_exUrl, $searchTerm)){
 	require_once 'lib/php/alchemyapi.php';
     $alchemyapi = new AlchemyAPI();
 	
-	$responseKeywords = $alchemyapi->keywords('url', $searchTerm, array("maxRetrieve"=>6));
+	$responseKeywords = $alchemyapi->keywords('url', $searchTerm, array("maxRetrieve"=>4));
 
 	$keywords = "";
 	
 	foreach($responseKeywords["keywords"] as $keyword){
 		$keywords = $keywords." ".$keyword["text"];
 	}
+	
+	
 	
 	
 	if (searchByTerm($keywords)==false){
