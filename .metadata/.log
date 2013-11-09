@@ -1,0 +1,41 @@
+!SESSION 2013-11-08 23:47:26.958 -----------------------------------------------
+eclipse.buildId=M20120914-1800
+java.version=1.6.0_65
+java.vendor=Apple Inc.
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.jee.product -product org.eclipse.epp.package.jee.product -keyring /Users/westonclarke/.eclipse_keyring -showlocation
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -product org.eclipse.epp.package.jee.product -data /Applications/MAMP/htdocs/anchorbot/ -product org.eclipse.epp.package.jee.product -keyring /Users/westonclarke/.eclipse_keyring -showlocation
+
+!ENTRY org.apache.ivyde.eclipse 1 0 2013-11-08 23:47:48.194
+!MESSAGE starting IvyDE plugin
+
+!ENTRY org.apache.ivyde.eclipse 1 0 2013-11-08 23:47:48.221
+!MESSAGE IvyDE plugin started
+
+!ENTRY org.eclipse.egit.ui 4 0 2013-11-08 23:48:40.649
+!MESSAGE Invalid project description.
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: Invalid project description.
+	at org.eclipse.core.internal.resources.Project.checkDescription(Project.java:175)
+	at org.eclipse.core.internal.resources.Project.assertCreateRequirements(Project.java:53)
+	at org.eclipse.core.internal.resources.Project.create(Project.java:287)
+	at org.eclipse.core.internal.resources.Project.create(Project.java:269)
+	at org.eclipse.egit.ui.internal.clone.ProjectUtils.createExistingProject(ProjectUtils.java:156)
+	at org.eclipse.egit.ui.internal.clone.ProjectUtils.access$0(ProjectUtils.java:119)
+	at org.eclipse.egit.ui.internal.clone.ProjectUtils$1.run(ProjectUtils.java:91)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2344)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2326)
+	at org.eclipse.egit.ui.internal.clone.ProjectUtils.createProjects(ProjectUtils.java:111)
+	at org.eclipse.egit.ui.internal.clone.ProjectUtils.createProjects(ProjectUtils.java:55)
+	at org.eclipse.egit.ui.internal.clone.GitImportWizard.importProjects(GitImportWizard.java:241)
+	at org.eclipse.egit.ui.internal.clone.GitImportWizard.access$2(GitImportWizard.java:222)
+	at org.eclipse.egit.ui.internal.clone.GitImportWizard$2.run(GitImportWizard.java:192)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:121)
+Contains: OK
+Contains: /Applications/MAMP/htdocs/anchorbot overlaps the workspace location: /Applications/MAMP/htdocs/anchorbot
+!SUBENTRY 1 org.eclipse.core.resources 4 77 2013-11-08 23:48:40.651
+!MESSAGE Invalid project description.
+!SUBENTRY 2 unknown 0 0 2013-11-08 23:48:40.651
+!MESSAGE OK
+!SUBENTRY 2 org.eclipse.core.resources 4 77 2013-11-08 23:48:40.651
+!MESSAGE /Applications/MAMP/htdocs/anchorbot overlaps the workspace location: /Applications/MAMP/htdocs/anchorbot

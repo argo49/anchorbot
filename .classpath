@@ -4,6 +4,10 @@
 	<classpathentry excluding="src/" kind="src" path=""/>
 	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/GSON"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/NLP"/>
+<<<<<<< HEAD
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+=======
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/gson2.2.4"/>
+>>>>>>> e14207eca10a12577a26c0e11f6c0b835410a7f2
 	<classpathentry kind="output" path="bin"/>
 </classpath>
