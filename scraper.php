@@ -144,13 +144,18 @@ if(filter_var($searchTerm, FILTER_VALIDATE_URL) === TRUE){
 	
 	
 	searchByTerm($keywords);
+	echo json_encode($return = array("status"=>"success","message"=>"URL Aricle Search Commenced!"); );
+	//exec("java ");
+	exit();
 	
 //If it isn't a URL, they are search terms
 }else{
 	
 	//searchByTerm makes a bunch of scrape files for the Java code to handle :D
 	searchByTerm($searchTerm);
+	echo json_encode($return = array("status"=>"success","message"=>"Aricle Term Search Commenced!"); );
 	//exec("java ");
+	exit();
 	
 	
 }
