@@ -7,20 +7,6 @@ $(window).load(function(){
 
 });
 
-function scraperSuccess(){
-
-}
-
-function shrinkHeader(){
-	var header = $('#header');
-	header.animate({paddingTop:"20px"});
-}
-
-function expandHeader(){
-	var header = $('#header');
-	header.animate({paddingTop:"+=230px"});
-}
-
 var submitQuery = function(){
 	var query = $('#searchInput').val();
 
@@ -34,8 +20,10 @@ var submitQuery = function(){
 		$('#placeholder').remove();
 		$('#searchResults').fadeIn(2000, function(){
 			window.setTimeout(function() {dimmer.fadeOut(400);}, 400)
+			scrollHeaderImageDown();
 		});
 	}, 1000);
+
 
 
 
@@ -52,3 +40,34 @@ var submitQuery = function(){
 
 }
 
+function scraperSuccess(){
+
+}
+
+function shrinkHeader(){
+	var header = $('#header');
+	header.animate({paddingTop:"20px"});
+}
+
+function expandHeader(){
+	var header = $('#header');
+	header.animate({paddingTop:"+=230px"});
+}
+
+function scrollHeaderImageDown(){
+	var image = $('#articleImage');
+	var imageHeight = image.height();
+
+	image.animate({top:"-="+(imageHeight-250)+"px"}, 30000, function(){
+			scrollHeaderImageUp();
+	});
+}
+
+function scrollHeaderImageUp(){
+	var image = $('#articleImage');
+	var imageHeight = image.height();
+
+	image.animate({top:"+="+(imageHeight-250)+"px"}, 30000, function(){
+		scrollHeaderImageDown();
+	});
+}

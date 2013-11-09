@@ -58,6 +58,7 @@ p{
 }
 
 #articleImage{
+	position:relative;
 	width: 100%;
 }
 
