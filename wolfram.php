@@ -20,9 +20,14 @@
 		}
 		
 	if ($type == "json"){
-		echo Parse("http://api.wolframalpha.com/v2/query?input=".$input."&appid=RJ45AJ-T8JV49E92P");
+		$return["name"] = $_POST['input'];
+		$return["jsonCall"] = Parse("http://api.wolframalpha.com/v2/query?input=".$input."&appid=RJ45AJ-T8JV49E92P");
+		echo json_encode($return);
+		
 	}else if ($type == "xml"){
-		echo file_get_contents("http://api.wolframalpha.com/v2/query?input=".$input."&appid=RJ45AJ-T8JV49E92P");
+		$return["name"] = $_POST['input'];
+		$return["xmlCall"] = file_get_contents("http://api.wolframalpha.com/v2/query?input=".$input."&appid=RJ45AJ-T8JV49E92P");
+		echo json_encode($return);
 	}
 	
 

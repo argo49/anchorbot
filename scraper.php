@@ -8,7 +8,7 @@
 ///// and scrapes the articles. The articles are turned
 ///// into JSON objects (each object has an array of paragraphs)
 //////////////////////////////////////
-
+session_start();
 function toXml($data, $rootNodeName = 'data', $xml=null)
 	{
 		// turn off compatibility mode as simple xml throws a wobbly if you don't.
@@ -19,7 +19,7 @@ function toXml($data, $rootNodeName = 'data', $xml=null)
  
 		if ($xml == null)
 		{
-			$xml = simplexml_load_string("<?xml version='1.0' encoding='utf-8'?><$rootNodeName />");
+			$xml = simplexml_load_string("<?xml version='1.0' encoding='ASCII'?><$rootNodeName />");
 		}
  
 		// loop through the data passed in.
@@ -45,7 +45,7 @@ function toXml($data, $rootNodeName = 'data', $xml=null)
 			else 
 			{
 				// add single node.
-                                $value = htmlentities($value);
+                                $value = $value;
 				$xml->addChild($key,$value);
 			}
  
@@ -73,7 +73,7 @@ if(filter_var($url, FILTER_VALIDATE_URL) === TRUE){
 	$jsonResponse = toXml($responseKeywords);
 	
 	$output = urlencode("alchemy-".md5(time('ru').mt_rand()).".xml");
-	
+	$_SESSION["alchemy"][] = $output;
 	
 	$myFile = "temp/".$output;
 	$fh = fopen($myFile, 'w') or die("can't open file");
@@ -100,7 +100,7 @@ require_once('lib/php/simple_html_dom.php');
 	
 	foreach($paragraphs as $paragraph){
 	
-		$paragraphResult[] = strip_tags($paragraph->innertext);
+		$paragraphResult[] = htmlentities(strip_tags($paragraph->innertext),ENT_XML1);
 	
 	}
 	$jsonReturn["url"] = $url;
@@ -211,8 +211,19 @@ function searchByTerm($searchTerm){
 			$scrapeResults[] = $scrapeResult;
 		}
 	}
+	
+	
+	
 	//var_dump($scrapeResults);
 	return $scrapeResults;
+
+}
+function callJava($outputs){
+
+	var_dump($outputs);
+	var_dump($_SESSION['alchemy']);
+	unset($_SESSION['alchemy']);
+	session_destroy();
 
 }
 /*
@@ -273,13 +284,20 @@ if(preg_match($reg_exUrl, $searchTerm)){
 	
 	
 	$outputs = searchByTerm($keywords);
-	if (count($outputs)< 1){
+	//add the user's original files
+	$output = urlencode(md5(time('ru').mt_rand())).".xml";
+	scrapeAndSave($searchTerm, $output);
+	$outputs[] = $output;
+	
+	if (count($outputs)< 2){
 		echo json_encode($return = array("status"=>"warning","message"=>"No Articles Found") );
 	}else{
 	
 		echo json_encode($return = array("status"=>"success","message"=>"URL Aricle Search Commenced!") );
 	}
 	
+	
+	callJava($outputs);
 	//exec("java ");
 	
 	
@@ -297,6 +315,8 @@ if(preg_match($reg_exUrl, $searchTerm)){
 	echo json_encode($return = array("status"=>"success","message"=>"Aricle Term Search Commenced!") );
 
 	
+	callJava($outputs);
+	//exec("java");
 	
 	
 }
