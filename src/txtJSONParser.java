@@ -44,7 +44,6 @@ public class txtJSONParser {
 		    paras.add(jArray.get(i).toString());
 		   } 
 		}
-		return paras;
-		
+		return paras;	
 	}
 }
