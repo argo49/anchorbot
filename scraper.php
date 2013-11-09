@@ -1,5 +1,14 @@
 
 <?php
+//////////////////////////////////////
+///// SCRAPER.PHP
+///// Web scraper for AnchorBot
+///// --------------------------
+///// Takes search terms or URL, searches news outlets 
+///// and scrapes the articles. The articles are turned
+///// into JSON objects (each object has an array of paragraphs)
+//////////////////////////////////////
+
 
 function scrapeAndSave($url,$output){
 //Scraper code!
