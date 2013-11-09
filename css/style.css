@@ -29,6 +29,10 @@ body, html{
 	padding-top: 250px;
 }
 
+#searchBox{
+	width:100%;
+}
+
 .container{
 	text-align:center;
 	vertical-align: middle;
