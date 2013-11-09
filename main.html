@@ -3,22 +3,26 @@
 	<head>
 		<title>AnchorBot</title>
 		<link rel="stylesheet" type="text/css" href="css/style.css"/>
-		<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="css/semantic.min.css"/>
 
+		<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
 	</head>
 	<body>
-
 		<div id="content">
+			<div id="header">
+				<div>AnchorBot</div>
+				<img alt="microphone.jpg" src="" />
+
+			</div>
+
 			<div id="mainSearch">
-				<form id="searchForm">
-					<input id="searchInput" placeholder="Serach for News!"/>
-					<button type="submit" id="searchButton">
-						<span id="searchButtonText">Report!</span>
-					</button>
-				</form>
+				<div id="searchBox" class="ui action input">
+ 					<div id="searchButtonDiv"><button class="ui button">Search</button></div>
+ 					<div id="searchInputDiv"><input id="searchInput" type="text" placeholder="Search..."></div>
+				</div>
 			</div>
 		</div>
-	 	<script type="text/javascript" src="js/script.js"></script>
 
+	 	<script type="text/javascript" src="js/script.js"></script>
 	</body>
 </html>
