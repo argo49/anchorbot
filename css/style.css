@@ -3,27 +3,14 @@
 	margin : 0 0 0 0;
 }
 
-body, html{
-	height: 100%;
-}
-
 #mainSearch{
-	position 	   : relative;
-	width   	   : 100px;
-	display 	   : block;
-	margin-left    : auto;
-	margin-right   : auto;
-	vertical-align : middle;
+	width: 1000px;
 }
 
 #searchInput{
-	float: left;
+	width:550px;
 }
 
-#searchButton{
-	float: left;
-}
-
-#searchButtonText{
-	margin: 10px;
+#searchInputDiv, #searchButtonDiv{
+	float:right;
 }

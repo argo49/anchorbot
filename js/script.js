@@ -1,1 +1,5 @@
-console.log("If this says 1 then I done a good job and jQuery is working! : " + $('#mainSearch').length);
+$(window).load(function(){
+	console.log($('#content').length)
+
+	$.ajax();
+});
