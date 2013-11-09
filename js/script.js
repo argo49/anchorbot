@@ -39,14 +39,16 @@ function submitQuery(query){
 			// var jsonData = $.parseJSON(data);
 			// populateArticle(jsonData.articles);
 			// temp/result.txt
-			window.setInterval(checkForFile(), 500);
+			$('body').prepend($('<button/>').on('click', function(){
+				checkForFile();
+			}).text('Check For File'));
 		},
 	});
 }
 
 function checkForFile(){
 	$.ajax({
-		url: "temp/return-result.txt",
+		url: "temp/return-result",
 		async: false,
 		success:function(data){
 			var jsonData = $.parseJSON(data);
