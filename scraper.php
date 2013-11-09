@@ -9,7 +9,50 @@
 ///// into JSON objects (each object has an array of paragraphs)
 //////////////////////////////////////
 
-
+function toXml($data, $rootNodeName = 'data', $xml=null)
+	{
+		// turn off compatibility mode as simple xml throws a wobbly if you don't.
+		if (ini_get('zend.ze1_compatibility_mode') == 1)
+		{
+			ini_set ('zend.ze1_compatibility_mode', 0);
+		}
+ 
+		if ($xml == null)
+		{
+			$xml = simplexml_load_string("<?xml version='1.0' encoding='utf-8'?><$rootNodeName />");
+		}
+ 
+		// loop through the data passed in.
+		foreach($data as $key => $value)
+		{
+			// no numeric keys in our xml please!
+			if (is_numeric($key))
+			{
+				// make string key...
+				$key = "unknownNode_". (string) $key;
+			}
+ 
+			// replace anything not alpha numeric
+			$key = preg_replace('/[^a-z]/i', '', $key);
+ 
+			// if there is another array found recrusively call this function
+			if (is_array($value))
+			{
+				$node = $xml->addChild($key);
+				// recrusive call.
+				toXml($value, $rootNodeName, $node);
+			}
+			else 
+			{
+				// add single node.
+                                $value = htmlentities($value);
+				$xml->addChild($key,$value);
+			}
+ 
+		}
+		// pass back as string. or simple xml object if you want!
+		return $xml->asXML();
+	}
 function generateAlchemyDump($url){
 if(filter_var($url, FILTER_VALIDATE_URL) === TRUE){
 
@@ -26,17 +69,17 @@ if(filter_var($url, FILTER_VALIDATE_URL) === TRUE){
     $alchemyapi = new AlchemyAPI();
 	$responseKeywords = $alchemyapi->entities('url', $url, array("showSourceText"=>1));
 	
-	$jsonResponse=trim(json_encode($responseKeywords));
+	//$jsonResponse=trim(json_encode($responseKeywords));
+	$jsonResponse = toXml($responseKeywords);
 	
-	
-	$output = urlencode("alchemy-".md5(time('ru').mt_rand()).".json");
+	$output = urlencode("alchemy-".md5(time('ru').mt_rand()).".xml");
 	
 	
 	$myFile = "temp/".$output;
 	$fh = fopen($myFile, 'w') or die("can't open file");
 	
 	$enc = mb_detect_encoding($jsonResponse);
-	$jsonResponse = mb_convert_encoding($jsonResponse, "UTF-8", $enc);
+	$jsonResponse = mb_convert_encoding($jsonResponse, "ASCII", $enc);
 	fwrite($fh, $jsonResponse);
 	fclose($fh);
 }
@@ -62,13 +105,14 @@ require_once('lib/php/simple_html_dom.php');
 	}
 	$jsonReturn["url"] = $url;
 	$jsonReturn["paragraphs"] = $paragraphResult;
-	$jsonReturn = json_encode($jsonReturn);
+	//$jsonReturn = json_encode($jsonReturn);
+	$jsonReturn = toXml($jsonReturn);
 	
 	//save the file
 	$myFile = "temp/".$output;
 	$fh = fopen($myFile, 'w') or die("can't open file");
 	$enc = mb_detect_encoding($jsonReturn);
-	$jsonReturn = mb_convert_encoding($jsonReturn, "UTF-8", $enc);
+	$jsonReturn = mb_convert_encoding($jsonReturn, "ASCII", $enc);
 	fwrite($fh, $jsonReturn);
 	fclose($fh);
 }
@@ -120,7 +164,7 @@ $response =json_decode($response);
 
 $results = $response->d->results;
 
-var_dump($results);
+//var_dump($results);
 //if no articles found, return false
 if (count($results) < 0 ){
 	return false;
@@ -137,7 +181,7 @@ if (!isset($results[0]->Url)){
 generateAlchemyDump($url);
 
 //make unique filename
-$output = urlencode(md5(time('ru').mt_rand())).".json";
+$output = urlencode(md5(time('ru').mt_rand())).".xml";
 
 //make a raw text dump (each paragraph is an JSON array element)
 scrapeAndSave($url,$output);
@@ -167,11 +211,39 @@ function searchByTerm($searchTerm){
 			$scrapeResults[] = $scrapeResult;
 		}
 	}
-	var_dump($scrapeResults);
+	//var_dump($scrapeResults);
 	return $scrapeResults;
 
 }
-
+/*
+function summary($outputs){
+		foreach($outputs as $output){
+			$text = json_decode(file_get_contents('temp/'.$output));
+			
+			$paragraphs = $text->paragraphs;
+			$firstParaSentences = explode('.',trim($paragraphs[2]));
+			$lastParaSentences = explode('.',trim($paragraphs[count($paragraphs)-1]));
+			
+			var_dump($firstParaSentences);
+			if (isset($firstParaSentences[0])){
+				$summary = $firstParaSentences[0];
+			}
+			if (isset($firstParaSentences[1])){
+				$summary = $summary." ".$firstParaSentences[1];
+			}
+			if (isset($firstParaSentences[2])){
+				$summary = $summary." ".$firstParaSentences[2];
+			}
+			if (isset($firstParaSentences[count($firstParaSentences)-1])&&count($firstParaSentences)-1 != 2&&count($firstParaSentences)-1 != 1){
+				$summary = $summary." ".$firstParaSentences[count($firstParaSentences)-1];
+			}
+			
+			echo $summary." ";
+		
+			
+		}
+}
+*/
 $searchTerm = $_POST['searchTerm'];
 
 //Is the searchTerm a URL?
@@ -200,28 +272,31 @@ if(preg_match($reg_exUrl, $searchTerm)){
 	
 	
 	
-	
-	if (searchByTerm($keywords)==false){
+	$outputs = searchByTerm($keywords);
+	if (count($outputs)< 1){
 		echo json_encode($return = array("status"=>"warning","message"=>"No Articles Found") );
 	}else{
+	
 		echo json_encode($return = array("status"=>"success","message"=>"URL Aricle Search Commenced!") );
 	}
 	
 	//exec("java ");
-	exit();
+	
 	
 //If it isn't a URL, they are search terms
 }else{
 	
 	//searchByTerm makes a bunch of scrape files for the Java code to handle :D
-	if (searchByTerm($keywords)==false){
+	$outputs = searchByTerm($keywords);
+	if (count($outputs)< 1){
 		echo json_encode($return = array("status"=>"warning","message"=>"No Articles Found") );
 	}else{
+		
 		echo json_encode($return = array("status"=>"success","message"=>"URL Aricle Search Commenced!") );
 	}
 	echo json_encode($return = array("status"=>"success","message"=>"Aricle Term Search Commenced!") );
-	//exec("java ");
-	exit();
+
+	
 	
 	
 }
