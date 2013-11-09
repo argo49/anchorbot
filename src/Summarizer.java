@@ -6,6 +6,7 @@ import java.util.ArrayList;
 
 import opennlp.tools.sentdetect.SentenceDetectorME;
 import opennlp.tools.sentdetect.SentenceModel;
+import opennlp.tools.util.InvalidFormatException;
 
 
 public class Summarizer
@@ -28,7 +29,7 @@ public class Summarizer
 	}
 	
 	
-	public String genSummary()
+	public String genSummary() throws InvalidFormatException, IOException
 	{
 		String summary = "";
 		for(int i = 0; i < par.size(); i++)
@@ -50,36 +51,16 @@ public class Summarizer
 		return summary;
 	}
 	
-	public String[] getSentences(String par)
+	public String[] getSentences(String par) throws InvalidFormatException, IOException
 	{
-		InputStream modelIn = null;
-		try
-		{
-			modelIn = new FileInputStream("en-sent.bin");
-		}
-		catch (FileNotFoundException e1)
-		{
-		}
-
-		SentenceModel model = null;
-		try {
-		  model = new SentenceModel(modelIn);
-		}
-		catch (IOException e) {
-		  e.printStackTrace();
-		}
-		finally {
-		  if (modelIn != null) {
-		    try {
-		      modelIn.close();
-		    }
-		    catch (IOException e) {
-		    }
-		  }
-		}
-		
-		SentenceDetectorME sentenceDetector = new SentenceDetectorME(model);
-		return sentenceDetector.sentDetect(par);
+		 
+		// always start with a model, a model is learned from training data
+		InputStream is = new FileInputStream("en-sent.bin");
+		SentenceModel model = new SentenceModel(is);
+		SentenceDetectorME sdetector = new SentenceDetectorME(model);
+ 
+		return sdetector.sentDetect(par);
+ 
 		
 	}
 }
