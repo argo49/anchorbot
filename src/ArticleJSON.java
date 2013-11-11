@@ -5,6 +5,7 @@ public class ArticleJSON
 {
 	private String summary;
 	private ArrayList<EntityWrap> entwrap;
+	private String url;
 	
 	public ArticleJSON()
 	{
@@ -17,6 +18,10 @@ public class ArticleJSON
 	public void setSummary(String summary)
 	{
 		this.summary = summary;
+	}
+	public void setUrl(String url)
+	{
+		this.url = url;
 	}
 	
 

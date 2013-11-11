@@ -37,15 +37,37 @@ public class Summarizer
 			if(i == 0)
 			{
 			String[] sentences = this.getSentences(par.get(i));
-			summary.concat(sentences[0]);
-			if(sentences.length >= 1)
-				summary.concat(sentences[1]);
+			int c = 0;
+			int num = 0;
+			while(c < sentences.length && num < 3)
+			{
+				if(sentences[c].toLowerCase().contains("javascript") || sentences[c].toLowerCase().contains("email") || sentences[c].toLowerCase().contains("sign-up") || sentences[c].toLowerCase().contains("comment"))
+				{
+					c++;
+					continue;
+				}
+				num++;
+				summary = summary.concat(sentences[c]);
+				c++;
 			}
+			}
+			
+			
+			if(i == 1)
+			{
+				String[] sentences = this.getSentences(par.get(i));
+				if(sentences.length > 1)
+					summary = summary.concat(sentences[1]);
+				if(sentences.length > 2)
+					summary = summary.concat(sentences[2]);
+			}
+				
 			
 			if(i == par.size() - 1)
 			{
 				String[] sentences = this.getSentences(par.get(i));
-				summary.concat(sentences[sentences.length-1]);
+				if(sentences.length < sentences.length-1)
+					summary = summary.concat(sentences[sentences.length-1]);
 			}
 		}
 		return summary;
