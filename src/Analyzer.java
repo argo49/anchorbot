@@ -1,13 +1,23 @@
+import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.io.PrintStream;
+import java.io.Reader;
+import java.nio.charset.Charset;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
+
+import javax.xml.parsers.ParserConfigurationException;
+
+import org.xml.sax.SAXException;
 
 import com.google.gson.Gson;
 
@@ -31,46 +41,78 @@ public class Analyzer
 	 * @param args
 	 * @throws IOException 
 	 * @throws InvalidFormatException 
+	 * @throws SAXException 
+	 * @throws ParserConfigurationException 
 	 */
-	public static void main(String[] args) throws InvalidFormatException, IOException
+	public static void main(String[] args) throws InvalidFormatException, IOException, ParserConfigurationException, SAXException
 	{
 		System.setProperty("wordnet.database.dir", "WordNet-3.0\\dict\\");
 		Gson gson = new Gson();
 		//Improve!
 		ReturnValue retVal = new ReturnValue();
 		ArrayList<ArticleJSON> arts = new ArrayList<ArticleJSON>();
-		for(int i = 0; i < args[i].length(); i++)
+		String title = args[0];
+		for(int i = 0; i < args.length; i++)
 		{
+			if(i == 0)
+				continue;
 			//Text file with scrapping
-			if(args[i].contains("alchemy"))
-			{
-				AlchemyJSONParser alcParser = new AlchemyJSONParser("temp/" + args[i]);
-				ArrayList<Entity> ents = alcParser.getEntities();
+//			if(args[i].contains("alchemy"))
+//			{
+//				AlchemyJSONParser alcParser = new AlchemyJSONParser("temp/" + args[i]);
+//				ArrayList<Entity> ents = alcParser.getEntities();
 				ArticleJSON art = new ArticleJSON();
+				String[] tmp = args[0].split("\\.");
+				title = tmp[0];
+//				for(int j = 0; j < args[j].length(); j++)
+//				{
+		
+//				File newFile = new File("temp");
+//				InputStream inputStream = new FileInputStream("temp/" + args[i]);
+//				Reader reader = 
+//						   new InputStreamReader(inputStream, Charset.forName("ANSI"));
+//				FileWriter w = new FileWriter(newFile);
+//				int data = reader.read();
+//				while(data != -1){
+//				    char theChar = (char) data;
+//				    w.write(theChar);
+//				    data = reader.read();
+//				}
 				
-				for(int j = 0; j < args[j].length(); j++)
-				{
 					txtJSONParser txtParser = new txtJSONParser("temp/" + args[i]);
 					ArrayList<String> pars = txtParser.getParagraphs();
 					String url = txtParser.getURL();
 					
-					if(!args[j].contains("alchemy") && alcParser.getUrl().equals(url))
-					{
+//					if(!args[j].contains("alchemy") && alcParser.getUrl().equals(url))
+//					{
 						//Found a match
 						Summarizer sum = new Summarizer();
 						sum.setPar(pars);
 						art.setSummary(sum.genSummary());
-					}
-				}
-				
-				art.setEntwrap(buildEntsJSON(ents, alcParser.getText())); 
+						art.setUrl(url);
+//					}
+//				}
+				new File("temp/" + args[i]).delete();
+//				art.setEntwrap(buildEntsJSON(ents, alcParser.getText())); 
 				arts.add(art);
-			}
+//			}
 			retVal.setArticles(arts);
 		}
 		
-		FileWriter fw = new FileWriter(new File("temp/return-"));
-		fw.write(gson.toJson(retVal));
+//		txtJSONParser txtParser = new txtJSONParser("temp/saveme2.xml");
+		
+//		FileWriter fw = new FileWriter(new File("temp/return-" + title));
+//		System.out.print(title);
+		
+		File file = new File("temp/return-" + title);  
+		FileWriter fw = new FileWriter(file); 
+		BufferedWriter out = new BufferedWriter(fw);
+		
+		String json = gson.toJson(retVal);
+		out.write(json);
+		out.flush();
+
+		System.out.println(json);
 			
 			
 	}
